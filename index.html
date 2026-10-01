@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" id="themeColor" content="#f6f2ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Meals">
+<title>Andrew's Meal Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236b4e3d'/%3E%3Cpath d='M18 33l9 9 19-20' fill='none' stroke='%23f6f2ec' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>
+  // Record any script error on the <html> element so it can be checked from outside.
+  (function () {
+    var errs = [];
+    function note(msg) {
+      errs.push(String(msg));
+      document.documentElement.setAttribute("data-js-errors", errs.join(" | "));
+    }
+    window.onerror = function (m, src, line) { note(m + " @" + line); };
+    window.addEventListener("unhandledrejection", function (e) { note("promise: " + (e.reason && e.reason.message || e.reason)); });
+  })();
+</script>
+<script src="tracker.js"></script>
+<script>
+  // Apply the theme before first paint: a stored choice wins, otherwise follow the device.
+  (function () {
+    var stored = null;
+    try { stored = localStorage.getItem("andrew-tracker:theme"); } catch (e) { /* private mode */ }
+    var prefersDark = !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var theme = window.Tracker.initialTheme(stored, prefersDark);
+    document.documentElement.setAttribute("data-theme", theme);
+    document.getElementById("themeColor").setAttribute("content", theme === "dark" ? "#17140f" : "#f6f2ec");
+  })();
+</script>
+<style>
+  :root {
+    --ink: #2a2522;
+    --muted: #6e655d;
+    --bg: #f6f2ec;
+    --card: #ffffff;
+    --line: #d8cfc3;
+    --beige: #ebe3d6;
+    --accent: #6b4e3d;
+    --on-accent: #ffffff;
+    --warn: #9a4a3a;
+    --shadow: 0 6px 18px rgba(42, 37, 34, 0.10);
+    --tab-on-bg: #6b4e3d;
+    --tab-on-fg: #ffffff;
+    color-scheme: light;
+  }
+  /* Dark: always when chosen, and from the device setting only when nothing is chosen. */
+  :root[data-theme="dark"] {
+    --ink: #efe8df;
+    --muted: #a89c8f;
+    --bg: #17140f;
+    --card: #221d18;
+    --line: #3b3229;
+    --beige: #2e2620;
+    --accent: #a87a5c;
+    --on-accent: #17140f;
+    --warn: #c86a56;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    --tab-on-bg: #6b4e3d;
+    --tab-on-fg: #f6f2ec;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --ink: #efe8df;
+      --muted: #a89c8f;
+      --bg: #17140f;
+      --card: #221d18;
+      --line: #3b3229;
+      --beige: #2e2620;
+      --accent: #a87a5c;
+      --on-accent: #17140f;
+      --warn: #c86a56;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+      --tab-on-bg: #6b4e3d;
+      --tab-on-fg: #f6f2ec;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 max(16px, env(safe-area-inset-right)) calc(32px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+  .num { font-variant-numeric: tabular-nums; }
+  button, input { font: inherit; color: inherit; }
+  .muted { color: var(--muted); }
+
+  /* Sticky totals */
+  .sticky {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg);
+    padding: calc(env(safe-area-inset-top) + 10px) 0 10px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+  .totals { padding: 12px 14px; box-shadow: var(--shadow); }
+  .date { font-size: 15px; color: var(--muted); margin: 0 0 2px; }
+  .kcal-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 8px; }
+  .kcal-big { font-size: 36px; font-weight: 700; line-height: 1.1; letter-spacing: -0.5px; }
+  .kcal-target { font-size: 15px; color: var(--muted); }
+  .drinks-line { font-size: 15px; color: var(--muted); margin-top: 2px; }
+  .bar { height: 6px; background: var(--beige); border-radius: 3px; overflow: hidden; margin-top: 4px; }
+  .bar > i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 3px; transition: width .25s ease; }
+  .over .bar > i { background: var(--warn); }
+  .over .val { color: var(--warn); }
+  .kcal-wrap.over .kcal-big { color: var(--warn); }
+  .macros { margin-top: 10px; display: grid; gap: 7px; }
+  .macro-head { display: flex; justify-content: space-between; gap: 8px; font-size: 15px; }
+  .macro-head b { font-weight: 600; }
+
+  /* Controls */
+  .chips { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin: 6px 0 10px; }
+  .chip {
+    min-height: 48px; border: 1px solid var(--line); background: var(--card); border-radius: 10px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 600; padding: 2px 0; cursor: pointer;
+  }
+  .chip small { font-size: 10px; font-weight: 500; color: var(--muted); text-transform: lowercase; line-height: 1; margin-top: 2px; }
+  .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .chip[aria-pressed="true"] small { color: var(--on-accent); }
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 2px 0 6px; }
+  .tab {
+    min-height: 60px; border-radius: 12px; border: 2px solid var(--accent); background: var(--card); color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    font-size: 15px; font-weight: 600; cursor: pointer; padding: 6px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); transition: background-color .15s ease, transform .1s ease;
+  }
+  .tab:active { transform: scale(0.98); }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tab svg { width: 26px; height: 26px; display: block; }
+  .tab[aria-pressed="true"] { background: var(--tab-on-bg); border-color: var(--tab-on-bg); color: var(--tab-on-fg); }
+  .drink-note { font-size: 15px; color: var(--ink); margin: 0 2px 8px; font-weight: 600; }
+  .drink-note[hidden] { display: none; }
+  .dayinfo { font-size: 15px; color: var(--muted); margin: 10px 2px 4px; }
+
+  /* Meals */
+  .meal { margin-top: 12px; overflow: hidden; }
+  .meal-head { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px 8px; }
+  .meal-title { flex: 1; min-width: 0; }
+  .meal-time { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .meal-name { font-weight: 700; font-size: 18px; }
+  .meal-note { font-size: 15px; color: var(--muted); margin-top: 2px; }
+  .ghost {
+    border: 1px solid var(--line); background: var(--card); border-radius: 9px;
+    min-height: 44px; padding: 0 12px; font-size: 15px; font-weight: 600; cursor: pointer; white-space: nowrap;
+  }
+  .row {
+    display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 8px 14px;
+    border-top: 1px solid var(--line); cursor: pointer; user-select: none;
+  }
+  .row input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+  .box {
+    flex: none; width: 28px; height: 28px; border-radius: 8px; border: 2px solid var(--line);
+    display: grid; place-items: center; background: var(--card);
+  }
+  .box::after {
+    content: ""; width: 7px; height: 13px; border: solid var(--on-accent); border-width: 0 3px 3px 0;
+    transform: translate(0, -2px) rotate(45deg); opacity: 0;
+  }
+  .row input:checked + .box { background: var(--accent); border-color: var(--accent); }
+  .row input:checked + .box::after, .box.ticked::after { opacity: 1; }
+  .box.ticked { background: var(--accent); border-color: var(--accent); }
+  .row.static { cursor: default; }
+  .row input:focus-visible + .box { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  .row input:checked ~ .label, .row input:checked ~ .amt { color: var(--muted); }
+  .row input:checked ~ .label { text-decoration: line-through; text-decoration-color: var(--line); }
+  .amt { text-align: right; flex: none; font-variant-numeric: tabular-nums; }
+  .amt small { display: block; font-size: 13px; color: var(--muted); }
+  .card-note { font-size: 14px; color: var(--muted); padding: 0 14px 10px; }
+
+  /* Extras */
+  .x {
+    flex: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--muted);
+    font-size: 22px; line-height: 1; border-radius: 9px; cursor: pointer; margin-right: -10px;
+  }
+  .add-form { padding: 4px 14px 14px; display: grid; gap: 10px; }
+  .add-form[hidden] { display: none; }
+  .add-form label { display: grid; gap: 3px; font-size: 14px; color: var(--muted); }
+  .add-form input {
+    min-height: 44px; border: 1px solid var(--line); border-radius: 9px; padding: 0 10px;
+    background: var(--bg); color: var(--ink); font-size: 17px; width: 100%; min-width: 0;
+  }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .primary {
+    min-height: 48px; border: 0; border-radius: 10px; background: var(--accent); color: var(--on-accent);
+    font-weight: 700; cursor: pointer;
+  }
+  .form-msg { font-size: 14px; color: var(--warn); min-height: 0; }
+  .reset { display: block; margin: 28px auto 0; color: var(--warn); }
+  .section-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px 8px; }
+  .section-head h2 { margin: 0; font-size: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sticky">
+    <section class="card totals" aria-live="polite">
+      <p class="date" id="date"></p>
+      <div class="kcal-wrap" id="kcalWrap">
+        <div class="kcal-line">
+          <span class="kcal-big num" id="kcalEaten">0</span>
+          <span class="kcal-target num" id="kcalTarget"></span>
+        </div>
+        <div class="bar"><i id="kcalBar"></i></div>
+      </div>
+      <div class="drinks-line num" id="withDrinks" hidden></div>
+      <div class="macros" id="macros"></div>
+    </section>
+  </div>
+
+  <div class="tabs">
+    <button type="button" class="tab" id="drinkTab" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 4h11l-1.4 16.2a1 1 0 0 1-1 .8H7.4a1 1 0 0 1-1-.8z"/>
+        <path d="M5.5 8.5h10"/>
+        <path d="M15.6 10h2.2a2 2 0 0 1 2 2v2.5a2 2 0 0 1-2 2h-2.7"/>
+      </svg>
+      <span id="drinkLabel">Not drinking</span>
+    </button>
+    <button type="button" class="tab" id="themeTab" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g id="sunIcon"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g>
+        <path id="moonIcon" d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>
+      </svg>
+      <span id="themeLabel">Day</span>
+    </button>
+  </div>
+  <p class="drink-note" id="drinkNote" hidden></p>
+  <div class="chips" id="chips" role="group" aria-label="Plan day"></div>
+  <p class="dayinfo" id="dayinfo"></p>
+
+  <div id="meals"></div>
+
+  <section class="card meal" id="drinksCard" hidden>
+    <div class="section-head"><h2>Drinks</h2></div>
+    <p class="card-note" id="drinksNote"></p>
+    <div id="cans"></div>
+  </section>
+
+  <section class="card meal" id="extrasCard" hidden>
+    <div class="section-head"><h2>Extras</h2></div>
+    <div id="extras"></div>
+  </section>
+
+  <section class="card meal">
+    <div class="section-head">
+      <h2>Add something else</h2>
+      <button type="button" class="ghost" id="addToggle" aria-expanded="false" aria-controls="addForm">Add</button>
+    </div>
+    <form class="add-form" id="addForm" hidden autocomplete="off">
+      <label>Name<input id="exName" type="text" maxlength="60" placeholder="e.g. Coffee with milk"></label>
+      <div class="grid4">
+        <label>kcal<input id="exKcal" type="text" inputmode="decimal"></label>
+        <label>Protein g<input id="exProtein" type="text" inputmode="decimal"></label>
+        <label>Carbs g<input id="exCarbs" type="text" inputmode="decimal"></label>
+        <label>Fat g<input id="exFat" type="text" inputmode="decimal"></label>
+      </div>
+      <p class="form-msg" id="formMsg" hidden></p>
+      <button type="submit" class="primary">Add to today</button>
+    </form>
+  </section>
+
+  <button type="button" class="ghost reset" id="reset">Reset today</button>
+</div>
+
+<script src="plan.js"></script>
+<script>
+(function () {
+  "use strict";
+  var PLAN = window.PLAN, T = window.Tracker;
+  var SHORT = { Monday: "Mon", Tuesday: "Tue", Wednesday: "Wed", Thursday: "Thu", Friday: "Fri", Saturday: "Sat", Sunday: "Sun" };
+  var $ = function (id) { return document.getElementById(id); };
+
+  var today, todayKey, state;
+  var THEME_KEY = "andrew-tracker:theme";
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    $("themeColor").setAttribute("content", theme === "dark" ? "#17140f" : "#f6f2ec");
+    renderTheme();
+  }
+  // Icon and label show the current look: sun and "Day" in light, moon and "Night" in dark.
+  function renderTheme() {
+    var dark = currentTheme() === "dark";
+    $("sunIcon").style.display = dark ? "none" : "";
+    $("moonIcon").style.display = dark ? "" : "none";
+    $("themeLabel").textContent = dark ? "Night" : "Day";
+    $("themeTab").setAttribute("aria-label", dark ? "Night look. Tap for day" : "Day look. Tap for night");
+  }
+
+  // ---- storage (every call guarded so private mode still works) ----
+  function storageKeys() {
+    try {
+      var out = [];
+      for (var i = 0; i < localStorage.length; i++) out.push(localStorage.key(i));
+      return out;
+    } catch (e) { return []; }
+  }
+  function load(key) {
+    try { var raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : null; } catch (e) { return null; }
+  }
+  function save() {
+    try { localStorage.setItem(todayKey, JSON.stringify(state)); } catch (e) { /* not available */ }
+  }
+  function prune() {
+    T.pruneKeys(storageKeys(), 14).forEach(function (k) {
+      try { localStorage.removeItem(k); } catch (e) { /* ignore */ }
+    });
+  }
+
+  function startDay() {
+    today = new Date();
+    todayKey = T.storageKey(T.localDateString(today));
+    prune();
+    state = T.migrateState(PLAN, load(todayKey), T.newState(T.weekdayName(today), "A"));
+  }
+
+  // ---- formatting ----
+  function fmt(n) { return Math.round(n).toLocaleString("en-GB"); }
+  function fmt1(n) { return String(Math.round(n * 10) / 10); }
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function setBar(bar, value, lo) {
+    bar.style.width = Math.min(100, lo > 0 ? (value / lo) * 100 : 0) + "%";
+  }
+
+  function update(next) { state = next; save(); render(); }
+
+  // ---- rendering ----
+  function renderTotals() {
+    var target = PLAN.targets[state.option];
+    var t = T.computeTotals(PLAN, state);
+    $("date").textContent = T.britishDate(today) + " · " + target.label;
+    $("kcalEaten").textContent = fmt(t.kcal);
+    $("kcalTarget").textContent = "of " + fmt(target.kcal[0]) + " to " + fmt(target.kcal[1]) + " kcal";
+    $("kcalWrap").classList.toggle("over", t.kcal > target.kcal[1]);
+    setBar($("kcalBar"), t.kcal, target.kcal[0]);
+
+    var wd = $("withDrinks");
+    var showDrinks = state.option === "B" && state.cans > 0;
+    wd.hidden = !showDrinks;
+    if (showDrinks) wd.textContent = "With drinks: " + fmt(t.withDrinksKcal) + " kcal (" + state.cans + (state.cans === 1 ? " can)" : " cans)");
+
+    var box = $("macros");
+    box.textContent = "";
+    [["protein", "Protein"], ["carbs", "Carbs"], ["fat", "Fat"]].forEach(function (m) {
+      var v = t[m[0]], range = target[m[0]];
+      var row = el("div", "macro" + (v > range[1] ? " over" : ""));
+      var head = el("div", "macro-head num");
+      head.appendChild(el("b", null, m[1]));
+      var val = el("span", "val", Math.round(v) + " g of " + range[0] + " to " + range[1] + " g");
+      head.appendChild(val);
+      row.appendChild(head);
+      var bar = el("div", "bar"), fill = el("i");
+      bar.appendChild(fill);
+      setBar(fill, v, range[0]);
+      row.appendChild(bar);
+      box.appendChild(row);
+    });
+  }
+
+  function renderControls() {
+    var chips = $("chips"), realDay = T.weekdayName(today);
+    chips.textContent = "";
+    PLAN.days.forEach(function (d) {
+      var b = el("button", "chip");
+      b.type = "button";
+      b.dataset.day = d.day;
+      b.setAttribute("aria-pressed", String(d.day === state.planDay));
+      b.setAttribute("aria-label", d.day + (d.day === realDay ? ", today" : ""));
+      b.appendChild(document.createTextNode(SHORT[d.day] || d.day.slice(0, 3)));
+      if (d.day === realDay) b.appendChild(el("small", null, "today"));
+      chips.appendChild(b);
+    });
+    var drinking = state.option === "B";
+    $("drinkTab").setAttribute("aria-pressed", String(drinking));
+    $("drinkTab").setAttribute("aria-label", drinking ? "Drinking day is on. Tap to turn it off" : "Not drinking. Tap for a drinking day");
+    $("drinkLabel").textContent = drinking ? "Drinking" : "Not drinking";
+    $("drinkNote").hidden = !drinking;
+    $("drinkNote").textContent = "Drinking day: " + fmt(PLAN.targets.B.kcal[1]) + " kcal food limit, protein held";
+    renderTheme();
+    var day = PLAN.days.find(function (d) { return d.day === state.planDay; });
+    $("dayinfo").textContent = day.day + " plan: " + day.training + ". " + day.shape + ".";
+  }
+
+  function itemRow(id, checked, labelText, kcal, sub) {
+    var row = el("label", "row");
+    var input = el("input");
+    input.type = "checkbox";
+    input.checked = checked;
+    input.dataset.id = id;
+    row.appendChild(input);
+    row.appendChild(el("span", "box"));
+    row.appendChild(el("span", "label", labelText));
+    var amt = el("span", "amt", fmt(kcal) + " kcal");
+    if (sub) amt.appendChild(el("small", null, sub));
+    row.appendChild(amt);
+    return row;
+  }
+
+  function renderMeals() {
+    var day = PLAN.days.find(function (d) { return d.day === state.planDay; });
+    var meals = day.options[state.option];
+    var wrap = $("meals");
+    wrap.textContent = "";
+    meals.forEach(function (meal, mi) {
+      var card = el("section", "card meal");
+      var head = el("div", "meal-head");
+      var title = el("div", "meal-title");
+      title.appendChild(el("div", "meal-time", meal.time));
+      title.appendChild(el("div", "meal-name", meal.name));
+      if (meal.note) title.appendChild(el("div", "meal-note", meal.note));
+      head.appendChild(title);
+      var allTicked = meal.items.every(function (it) { return state.checked.indexOf(it.id) !== -1; });
+      var btn = el("button", "ghost", allTicked ? "Untick all" : "Tick all");
+      btn.type = "button";
+      btn.dataset.meal = String(mi);
+      btn.dataset.check = allTicked ? "0" : "1";
+      head.appendChild(btn);
+      card.appendChild(head);
+      meal.items.forEach(function (it) {
+        card.appendChild(itemRow(it.id, state.checked.indexOf(it.id) !== -1, it.label, it.kcal, fmt1(it.protein) + " g protein"));
+      });
+      wrap.appendChild(card);
+    });
+  }
+
+  function renderDrinks() {
+    var card = $("drinksCard");
+    card.hidden = state.option !== "B";
+    if (card.hidden) return;
+    $("drinksNote").textContent = PLAN.drinks.name + ". Counted in “With drinks” only, not in the food total.";
+    var box = $("cans");
+    box.textContent = "";
+    for (var i = 0; i < PLAN.drinks.cans; i++) {
+      box.appendChild(itemRow("can-" + i, i < state.cans, "Can " + (i + 1), PLAN.drinks.kcalPerCan, PLAN.drinks.carbsPerCan + " g carbs"));
+    }
+  }
+
+  function renderExtras() {
+    var card = $("extrasCard"), box = $("extras");
+    card.hidden = state.extras.length === 0;
+    box.textContent = "";
+    state.extras.forEach(function (x, i) {
+      var row = el("div", "row static");
+      row.appendChild(el("span", "box ticked"));
+      row.appendChild(el("span", "label muted", x.name));
+      var amt = el("span", "amt muted", fmt(x.kcal) + " kcal");
+      amt.appendChild(el("small", null, fmt1(x.protein) + " g protein"));
+      row.appendChild(amt);
+      var rm = el("button", "x", "×");
+      rm.type = "button";
+      rm.dataset.remove = String(i);
+      rm.setAttribute("aria-label", "Remove " + x.name);
+      row.appendChild(rm);
+      box.appendChild(row);
+    });
+  }
+
+  function render() {
+    renderTotals();
+    renderControls();
+    renderMeals();
+    renderDrinks();
+    renderExtras();
+  }
+
+  // ---- events ----
+  $("chips").addEventListener("click", function (e) {
+    var b = e.target.closest(".chip");
+    if (b && b.dataset.day !== state.planDay) update(T.setPlanDay(PLAN, state, b.dataset.day));
+  });
+  $("drinkTab").addEventListener("click", function () {
+    update(T.setOption(PLAN, state, state.option === "B" ? "A" : "B"));
+  });
+  $("themeTab").addEventListener("click", function () {
+    var theme = T.nextTheme(currentTheme());
+    try { localStorage.setItem(THEME_KEY, theme); } catch (e) { /* private mode: still switches for this visit */ }
+    applyTheme(theme);
+  });
+  // With no stored choice, keep following the device if it changes between day and night.
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    var onDeviceTheme = function () {
+      var stored = null;
+      try { stored = localStorage.getItem(THEME_KEY); } catch (e) { /* ignore */ }
+      applyTheme(T.initialTheme(stored, mq.matches));
+    };
+    if (mq.addEventListener) mq.addEventListener("change", onDeviceTheme);
+  }
+  $("meals").addEventListener("change", function (e) {
+    if (e.target.dataset.id) update(T.toggleItem(state, e.target.dataset.id));
+  });
+  $("meals").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-meal]");
+    if (!b) return;
+    var day = PLAN.days.find(function (d) { return d.day === state.planDay; });
+    update(T.setMealChecked(state, day.options[state.option][Number(b.dataset.meal)], b.dataset.check === "1"));
+  });
+  $("cans").addEventListener("change", function (e) {
+    // Cans fill in order: ticking Can 3 means three cans, unticking Can 2 leaves one.
+    var idx = Number(String(e.target.dataset.id).replace("can-", ""));
+    var n = e.target.checked ? idx + 1 : idx;
+    update(Object.assign({}, state, { cans: Math.max(0, Math.min(PLAN.drinks.cans, n)) }));
+  });
+  $("extras").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-remove]");
+    if (!b) return;
+    var i = Number(b.dataset.remove);
+    update(Object.assign({}, state, { extras: state.extras.filter(function (_, j) { return j !== i; }) }));
+  });
+
+  $("addToggle").addEventListener("click", function () {
+    var form = $("addForm"), open = form.hidden;
+    form.hidden = !open;
+    this.setAttribute("aria-expanded", String(open));
+    this.textContent = open ? "Close" : "Add";
+    if (open) $("exName").focus();
+  });
+  function readNum(id) {
+    var n = parseFloat(String($(id).value).replace(",", "."));
+    return isFinite(n) && n > 0 ? n : 0;
+  }
+  $("addForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var x = {
+      name: $("exName").value.trim() || "Extra",
+      kcal: readNum("exKcal"), protein: readNum("exProtein"), carbs: readNum("exCarbs"), fat: readNum("exFat"),
+    };
+    var msg = $("formMsg");
+    if (!x.kcal && !x.protein && !x.carbs && !x.fat) {
+      msg.textContent = "Enter the calories, or at least one macro.";
+      msg.hidden = false;
+      $("exKcal").focus();
+      return;
+    }
+    msg.hidden = true;
+    ["exName", "exKcal", "exProtein", "exCarbs", "exFat"].forEach(function (id) { $(id).value = ""; });
+    update(T.migrateState(PLAN, Object.assign({}, state, { extras: state.extras.concat(x) }), state));
+  });
+
+  $("reset").addEventListener("click", function () {
+    if (!window.confirm("Clear everything ticked today?")) return;
+    update(T.newState(state.planDay, state.option));
+  });
+
+  // If the page stays open past midnight, start the new day when he comes back to it.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible" && T.storageKey(T.localDateString(new Date())) !== todayKey) {
+      startDay();
+      render();
+    }
+  });
+
+  // ---- start ----
+  startDay();
+  var params = new URLSearchParams(location.search);
+  var opt = params.get("option");
+  if ((opt === "A" || opt === "B") && opt !== state.option) {
+    state = T.setOption(PLAN, state, opt);
+    save();
+  }
+  render();
+})();
+</script>
+</body>
+</html>
