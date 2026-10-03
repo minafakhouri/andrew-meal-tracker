@@ -358,15 +358,16 @@
     var target = PLAN.targets[state.option];
     var t = T.computeTotals(PLAN, state);
     $("date").textContent = T.britishDate(today) + " · " + target.label;
-    $("kcalEaten").textContent = fmt(t.kcal);
-    $("kcalTarget").textContent = "of " + fmt(target.kcal[0]) + " to " + fmt(target.kcal[1]) + " kcal";
-    $("kcalWrap").classList.toggle("over", t.kcal > target.kcal[1]);
-    setBar($("kcalBar"), t.kcal, target.kcal[0]);
+    var h = T.headline(PLAN, state);
+    $("kcalEaten").textContent = fmt(h.kcal);
+    $("kcalTarget").textContent = "of " + fmt(h.low) + " to " + fmt(h.high) + " kcal" + (state.option === "B" ? ", drinks included" : "");
+    $("kcalWrap").classList.toggle("over", h.kcal > h.high || t.kcal > target.kcal[1]);
+    setBar($("kcalBar"), h.kcal, h.low);
 
     var wd = $("withDrinks");
-    var showDrinks = state.option === "B" && state.cans > 0;
+    var showDrinks = state.option === "B";
     wd.hidden = !showDrinks;
-    if (showDrinks) wd.textContent = "With drinks: " + fmt(t.withDrinksKcal) + " kcal (" + state.cans + (state.cans === 1 ? " can)" : " cans)");
+    if (showDrinks) wd.textContent = "Food " + fmt(h.food) + " of " + fmt(target.kcal[1]) + " max, drinks " + fmt(h.drinks) + " kcal (" + state.cans + (state.cans === 1 ? " can)" : " cans)");
 
     var box = $("macros");
     box.textContent = "";
@@ -456,7 +457,7 @@
     var card = $("drinksCard");
     card.hidden = state.option !== "B";
     if (card.hidden) return;
-    $("drinksNote").textContent = PLAN.drinks.name + ". Counted in “With drinks” only, not in the food total.";
+    $("drinksNote").textContent = PLAN.drinks.name + ". Each can you tick goes into the big number at the top.";
     var box = $("cans");
     box.textContent = "";
     for (var i = 0; i < PLAN.drinks.cans; i++) {

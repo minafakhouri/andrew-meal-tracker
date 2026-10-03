@@ -95,6 +95,15 @@
     };
   }
 
+  // The big number on screen: on a drinking day it carries the ticked cans, and the
+  // target carries the planned session on top of the food window.
+  function headline(plan, state) {
+    const t = computeTotals(plan, state);
+    const win = plan.targets[state.option].kcal;
+    const session = state.option === "B" ? plan.drinks.cans * plan.drinks.kcalPerCan : 0;
+    return { kcal: t.withDrinksKcal, food: t.kcal, drinks: t.drinksKcal, low: win[0] + session, high: win[1] + session };
+  }
+
   function toggleItem(state, id) {
     const checked = state.checked.includes(id)
       ? state.checked.filter((x) => x !== id)
@@ -143,7 +152,7 @@
 
   const api = {
     storageKey, localDateString, weekdayName, britishDate, newState, migrateState,
-    computeTotals, toggleItem, setMealChecked, setOption, setPlanDay, pruneKeys,
+    computeTotals, headline, toggleItem, setMealChecked, setOption, setPlanDay, pruneKeys,
     nextTheme, initialTheme,
   };
   if (typeof module !== "undefined") module.exports = api; else window.Tracker = api;

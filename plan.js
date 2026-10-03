@@ -245,7 +245,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Grilled chicken, a small portion of rice, steamed veg, no oil today",
+      "note": "Grilled chicken, steamed veg, no rice or oil today. The wrap tonight is the carbs",
       "items": [
        {
         "id": "mon-B-1-0",
@@ -257,19 +257,11 @@ window.PLAN = {
        },
        {
         "id": "mon-B-1-1",
-        "label": "100 g basmati rice, cooked (40 g dry)",
-        "kcal": 130,
-        "protein": 2.7,
-        "carbs": 28.0,
-        "fat": 0.3
-       },
-       {
-        "id": "mon-B-1-2",
-        "label": "200 g steamed mixed veg",
-        "kcal": 70,
-        "protein": 4.0,
-        "carbs": 12.0,
-        "fat": 0.6
+        "label": "250 g steamed mixed veg",
+        "kcal": 88,
+        "protein": 5.0,
+        "carbs": 15.0,
+        "fat": 0.8
        }
       ]
      },
@@ -319,11 +311,11 @@ window.PLAN = {
        },
        {
         "id": "mon-B-3-3",
-        "label": "1 bran tortilla",
-        "kcal": 140,
-        "protein": 5.0,
-        "carbs": 25.0,
-        "fat": 2.5
+        "label": "1 large bran tortilla (90 g)",
+        "kcal": 250,
+        "protein": 7.0,
+        "carbs": 53.0,
+        "fat": 1.0
        }
       ]
      },
@@ -535,7 +527,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Mince with onion and spices, a small portion of rice, veg",
+      "note": "Mince with onion and spices, veg, no rice today. The wrap tonight is the carbs",
       "items": [
        {
         "id": "tue-B-1-0",
@@ -555,14 +547,6 @@ window.PLAN = {
        },
        {
         "id": "tue-B-1-2",
-        "label": "100 g basmati rice, cooked (40 g dry)",
-        "kcal": 130,
-        "protein": 2.7,
-        "carbs": 28.0,
-        "fat": 0.3
-       },
-       {
-        "id": "tue-B-1-3",
         "label": "1 tsp olive oil",
         "kcal": 44,
         "protein": 0.0,
@@ -602,11 +586,11 @@ window.PLAN = {
        },
        {
         "id": "tue-B-2-3",
-        "label": "1 bran tortilla",
-        "kcal": 140,
-        "protein": 5.0,
-        "carbs": 25.0,
-        "fat": 2.5
+        "label": "1 large bran tortilla (90 g)",
+        "kcal": 250,
+        "protein": 7.0,
+        "carbs": 53.0,
+        "fat": 1.0
        }
       ]
      },
@@ -700,7 +684,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Two tuna wraps with salad in the oil. Tuna in oil, drained",
+      "note": "One big tuna wrap with salad in the oil. Tuna in oil, drained",
       "items": [
        {
         "id": "wed-A-1-0",
@@ -712,11 +696,11 @@ window.PLAN = {
        },
        {
         "id": "wed-A-1-1",
-        "label": "2 bran tortillas",
-        "kcal": 280,
-        "protein": 10.0,
-        "carbs": 50.0,
-        "fat": 5.0
+        "label": "1 large bran tortilla (90 g)",
+        "kcal": 250,
+        "protein": 7.0,
+        "carbs": 53.0,
+        "fat": 1.0
        },
        {
         "id": "wed-A-1-2",
@@ -854,11 +838,11 @@ window.PLAN = {
        },
        {
         "id": "wed-B-1-1",
-        "label": "1 bran tortilla",
-        "kcal": 140,
-        "protein": 5.0,
-        "carbs": 25.0,
-        "fat": 2.5
+        "label": "1 large bran tortilla (90 g)",
+        "kcal": 250,
+        "protein": 7.0,
+        "carbs": 53.0,
+        "fat": 1.0
        },
        {
         "id": "wed-B-1-2",
@@ -896,7 +880,7 @@ window.PLAN = {
      {
       "time": "21:30",
       "name": "Dinner, before the drinks",
-      "note": "Grilled chicken, rice, veg in the oil. Eat before the first can",
+      "note": "Grilled chicken, a small spoon of rice, veg in the oil. Eat before the first can",
       "items": [
        {
         "id": "wed-B-3-0",
@@ -908,11 +892,11 @@ window.PLAN = {
        },
        {
         "id": "wed-B-3-1",
-        "label": "150 g basmati rice, cooked (50 g dry)",
-        "kcal": 195,
-        "protein": 4.1,
-        "carbs": 42.0,
-        "fat": 0.4
+        "label": "60 g basmati rice, cooked (20 g dry)",
+        "kcal": 78,
+        "protein": 1.6,
+        "carbs": 16.8,
+        "fat": 0.2
        },
        {
         "id": "wed-B-3-2",
@@ -1409,7 +1393,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Grilled chicken, rice, veg",
+      "note": "Grilled chicken, a small spoon of rice, veg",
       "items": [
        {
         "id": "fri-B-1-0",
@@ -1421,11 +1405,11 @@ window.PLAN = {
        },
        {
         "id": "fri-B-1-1",
-        "label": "150 g basmati rice, cooked (50 g dry)",
-        "kcal": 195,
-        "protein": 4.1,
-        "carbs": 42.0,
-        "fat": 0.4
+        "label": "60 g basmati rice, cooked (20 g dry)",
+        "kcal": 78,
+        "protein": 1.6,
+        "carbs": 16.8,
+        "fat": 0.2
        },
        {
         "id": "fri-B-1-2",
@@ -1476,11 +1460,11 @@ window.PLAN = {
        },
        {
         "id": "fri-B-2-3",
-        "label": "1 bran tortilla",
-        "kcal": 140,
-        "protein": 5.0,
-        "carbs": 25.0,
-        "fat": 2.5
+        "label": "1 large bran tortilla (90 g)",
+        "kcal": 250,
+        "protein": 7.0,
+        "carbs": 53.0,
+        "fat": 1.0
        },
        {
         "id": "fri-B-2-4",
@@ -1555,11 +1539,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-0-3",
-        "label": "1 bran tortilla",
-        "kcal": 140,
-        "protein": 5.0,
-        "carbs": 25.0,
-        "fat": 2.5
+        "label": "1 large bran tortilla (90 g)",
+        "kcal": 250,
+        "protein": 7.0,
+        "carbs": 53.0,
+        "fat": 1.0
        },
        {
         "id": "sat-A-0-4",
@@ -1586,11 +1570,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-1-1",
-        "label": "200 g basmati rice, cooked (70 g dry)",
-        "kcal": 260,
-        "protein": 5.4,
-        "carbs": 56.0,
-        "fat": 0.6
+        "label": "110 g basmati rice, cooked (40 g dry)",
+        "kcal": 143,
+        "protein": 3.0,
+        "carbs": 30.8,
+        "fat": 0.3
        },
        {
         "id": "sat-A-1-2",
@@ -1697,11 +1681,11 @@ window.PLAN = {
        },
        {
         "id": "sat-B-0-2",
-        "label": "1 bran tortilla",
-        "kcal": 140,
-        "protein": 5.0,
-        "carbs": 25.0,
-        "fat": 2.5
+        "label": "1 large bran tortilla (90 g)",
+        "kcal": 250,
+        "protein": 7.0,
+        "carbs": 53.0,
+        "fat": 1.0
        },
        {
         "id": "sat-B-0-3",
@@ -1716,7 +1700,7 @@ window.PLAN = {
      {
       "time": "14:30",
       "name": "Lunch",
-      "note": "Tuna with rice and veg",
+      "note": "Tuna with a small spoon of rice and veg",
       "items": [
        {
         "id": "sat-B-1-0",
@@ -1728,11 +1712,11 @@ window.PLAN = {
        },
        {
         "id": "sat-B-1-1",
-        "label": "150 g basmati rice, cooked (50 g dry)",
-        "kcal": 195,
-        "protein": 4.1,
-        "carbs": 42.0,
-        "fat": 0.4
+        "label": "60 g basmati rice, cooked (20 g dry)",
+        "kcal": 78,
+        "protein": 1.6,
+        "carbs": 16.8,
+        "fat": 0.2
        },
        {
         "id": "sat-B-1-2",
@@ -1801,7 +1785,7 @@ window.PLAN = {
      {
       "time": "After drinks",
       "name": "Supper",
-      "note": "Cottage cheese wrap, then bed",
+      "note": "Cottage cheese on toast, then bed",
       "items": [
        {
         "id": "sat-B-4-0",
@@ -1813,11 +1797,11 @@ window.PLAN = {
        },
        {
         "id": "sat-B-4-1",
-        "label": "1 bran tortilla",
-        "kcal": 140,
-        "protein": 5.0,
-        "carbs": 25.0,
-        "fat": 2.5
+        "label": "2 slices bran toast",
+        "kcal": 110,
+        "protein": 4.4,
+        "carbs": 19.6,
+        "fat": 1.2
        }
       ]
      }
