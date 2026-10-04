@@ -92,6 +92,7 @@
       drinksKcal,
       drinksCarbs,
       withDrinksKcal: kcal + drinksKcal,
+      carbsShown: round1(t.carbs + drinksCarbs),
     };
   }
 

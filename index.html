@@ -372,7 +372,7 @@
     var box = $("macros");
     box.textContent = "";
     [["protein", "Protein"], ["carbs", "Carbs"], ["fat", "Fat"]].forEach(function (m) {
-      var v = t[m[0]], range = target[m[0]];
+      var v = m[0] === "carbs" ? t.carbsShown : t[m[0]], range = target[m[0]];
       var row = el("div", "macro" + (v > range[1] ? " over" : ""));
       var head = el("div", "macro-head num");
       head.appendChild(el("b", null, m[1]));
