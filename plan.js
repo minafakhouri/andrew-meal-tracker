@@ -389,11 +389,11 @@ window.PLAN = {
       "items": [
        {
         "id": "tue-A-1-0",
-        "label": "220 g extra lean minced beef (cooked)",
-        "kcal": 301,
-        "protein": 54.3,
+        "label": "190 g extra lean minced beef (cooked)",
+        "kcal": 260,
+        "protein": 46.9,
         "carbs": 0.0,
-        "fat": 9.2
+        "fat": 8.0
        },
        {
         "id": "tue-A-1-1",
@@ -475,11 +475,11 @@ window.PLAN = {
       "items": [
        {
         "id": "tue-A-3-0",
-        "label": "270 g cottage cheese",
-        "kcal": 278,
-        "protein": 25.4,
-        "carbs": 8.4,
-        "fat": 16.2
+        "label": "300 g cottage cheese",
+        "kcal": 309,
+        "protein": 28.2,
+        "carbs": 9.3,
+        "fat": 18.0
        },
        {
         "id": "tue-A-3-1",
@@ -508,11 +508,11 @@ window.PLAN = {
        },
        {
         "id": "tue-B-0-1",
-        "label": "25 g Balance bread snack",
-        "kcal": 100,
-        "protein": 5.5,
-        "carbs": 17.1,
-        "fat": 1.1
+        "label": "30 g Balance bread snack",
+        "kcal": 120,
+        "protein": 6.6,
+        "carbs": 20.5,
+        "fat": 1.3
        },
        {
         "id": "tue-B-0-2",
@@ -562,11 +562,11 @@ window.PLAN = {
       "items": [
        {
         "id": "tue-B-2-0",
-        "label": "180 g chicken breast (cooked)",
-        "kcal": 266,
-        "protein": 57.6,
+        "label": "150 g chicken breast (cooked)",
+        "kcal": 222,
+        "protein": 48.0,
         "carbs": 0.0,
-        "fat": 4.0
+        "fat": 3.3
        },
        {
         "id": "tue-B-2-1",
@@ -884,11 +884,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-B-3-0",
-        "label": "180 g chicken breast (cooked)",
-        "kcal": 266,
-        "protein": 57.6,
+        "label": "150 g chicken breast (cooked)",
+        "kcal": 222,
+        "protein": 48.0,
         "carbs": 0.0,
-        "fat": 4.0
+        "fat": 3.3
        },
        {
         "id": "wed-B-3-1",
@@ -994,11 +994,11 @@ window.PLAN = {
       "items": [
        {
         "id": "thu-A-1-0",
-        "label": "250 g beef fillet (cooked)",
-        "kcal": 470,
-        "protein": 72.8,
+        "label": "225 g beef fillet (cooked)",
+        "kcal": 423,
+        "protein": 65.5,
         "carbs": 0.0,
-        "fat": 20.0
+        "fat": 18.0
        },
        {
         "id": "thu-A-1-1",
@@ -1121,11 +1121,11 @@ window.PLAN = {
       "items": [
        {
         "id": "thu-B-1-0",
-        "label": "220 g chicken breast (cooked)",
-        "kcal": 326,
-        "protein": 70.4,
+        "label": "200 g chicken breast (cooked)",
+        "kcal": 296,
+        "protein": 64.0,
         "carbs": 0.0,
-        "fat": 4.8
+        "fat": 4.4
        },
        {
         "id": "thu-B-1-1",
@@ -1247,10 +1247,10 @@ window.PLAN = {
        },
        {
         "id": "fri-A-1-1",
-        "label": "250 g basmati rice (cooked)",
-        "kcal": 292,
-        "protein": 7.0,
-        "carbs": 66.2,
+        "label": "260 g basmati rice (cooked)",
+        "kcal": 304,
+        "protein": 7.3,
+        "carbs": 68.9,
         "fat": 1.8
        },
        {
@@ -1278,11 +1278,11 @@ window.PLAN = {
       "items": [
        {
         "id": "fri-A-2-0",
-        "label": "170 g tuna in water (drained)",
-        "kcal": 185,
-        "protein": 42.3,
+        "label": "150 g tuna in water (drained)",
+        "kcal": 164,
+        "protein": 37.3,
         "carbs": 0.0,
-        "fat": 1.7
+        "fat": 1.5
        },
        {
         "id": "fri-A-2-1",
@@ -1475,11 +1475,11 @@ window.PLAN = {
        },
        {
         "id": "fri-B-3-1",
-        "label": "60 g smoked turkey slices",
-        "kcal": 68,
-        "protein": 13.8,
-        "carbs": 0.7,
-        "fat": 1.1
+        "label": "40 g smoked turkey slices",
+        "kcal": 46,
+        "protein": 9.2,
+        "carbs": 0.5,
+        "fat": 0.8
        }
       ]
      }
@@ -1860,11 +1860,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sun-A-1-0",
-        "label": "210 g chicken breast (cooked)",
-        "kcal": 311,
-        "protein": 67.2,
+        "label": "190 g chicken breast (cooked)",
+        "kcal": 281,
+        "protein": 60.8,
         "carbs": 0.0,
-        "fat": 4.6
+        "fat": 4.2
        },
        {
         "id": "sun-A-1-1",
@@ -1987,11 +1987,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sun-B-1-0",
-        "label": "240 g chicken breast (cooked)",
-        "kcal": 355,
-        "protein": 76.8,
+        "label": "210 g chicken breast (cooked)",
+        "kcal": 311,
+        "protein": 67.2,
         "carbs": 0.0,
-        "fat": 5.3
+        "fat": 4.6
        },
        {
         "id": "sun-B-1-1",
