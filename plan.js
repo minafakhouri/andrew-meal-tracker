@@ -361,8 +361,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        },
        {
         "id": "tue-A-0-1",
@@ -503,16 +503,16 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        },
        {
         "id": "tue-B-0-1",
-        "label": "30 g Balance bread snack",
-        "kcal": 120,
-        "protein": 6.6,
-        "carbs": 20.5,
-        "fat": 1.3
+        "label": "25 g Balance bread snack",
+        "kcal": 100,
+        "protein": 5.5,
+        "carbs": 17.1,
+        "fat": 1.1
        },
        {
         "id": "tue-B-0-2",
@@ -926,8 +926,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        }
       ]
      }
@@ -982,8 +982,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        }
       ]
      },
@@ -1109,8 +1109,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        }
       ]
      },
@@ -1247,10 +1247,10 @@ window.PLAN = {
        },
        {
         "id": "fri-A-1-1",
-        "label": "260 g basmati rice (cooked)",
-        "kcal": 304,
-        "protein": 7.3,
-        "carbs": 68.9,
+        "label": "250 g basmati rice (cooked)",
+        "kcal": 292,
+        "protein": 7.0,
+        "carbs": 66.2,
         "fat": 1.8
        },
        {
@@ -1312,8 +1312,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        },
        {
         "id": "fri-A-3-1",
@@ -1470,8 +1470,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        },
        {
         "id": "fri-B-3-1",
@@ -1902,8 +1902,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        },
        {
         "id": "sun-A-2-1",
@@ -2029,8 +2029,8 @@ window.PLAN = {
         "label": "1 HiPro strawberry Greek yogurt cup (200 g)",
         "kcal": 127,
         "protein": 18.0,
-        "carbs": 10.0,
-        "fat": 2.0
+        "carbs": 12.0,
+        "fat": 0.9
        },
        {
         "id": "sun-B-2-1",
