@@ -92,11 +92,11 @@ window.PLAN = {
        },
        {
         "id": "mon-A-0-4",
-        "label": "10 g olive oil (about 2 tsp)",
-        "kcal": 90,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 10.0
+        "fat": 13.7
        }
       ]
      },
@@ -131,11 +131,11 @@ window.PLAN = {
        },
        {
         "id": "mon-A-1-3",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -162,10 +162,10 @@ window.PLAN = {
        },
        {
         "id": "mon-A-2-2",
-        "label": "7 g honey",
-        "kcal": 20,
-        "protein": 0.0,
-        "carbs": 5.3,
+        "label": "1 tablespoon honey",
+        "kcal": 60,
+        "protein": 0.1,
+        "carbs": 16.0,
         "fat": 0.0
        }
       ]
@@ -193,11 +193,11 @@ window.PLAN = {
        },
        {
         "id": "mon-A-3-2",
-        "label": "15 g olive oil (about 3 tsp)",
-        "kcal": 135,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 15.0
+        "fat": 13.7
        }
       ]
      }
@@ -303,11 +303,11 @@ window.PLAN = {
        },
        {
         "id": "mon-B-3-2",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        },
        {
         "id": "mon-B-3-3",
@@ -366,7 +366,7 @@ window.PLAN = {
        },
        {
         "id": "tue-A-0-1",
-        "label": "30 g Balance bread snack",
+        "label": "30 g Balance crisps",
         "kcal": 120,
         "protein": 6.6,
         "carbs": 20.5,
@@ -389,11 +389,11 @@ window.PLAN = {
       "items": [
        {
         "id": "tue-A-1-0",
-        "label": "190 g extra lean minced beef (cooked)",
-        "kcal": 260,
-        "protein": 46.9,
+        "label": "190 g minced beef, 5% fat (pan-fried)",
+        "kcal": 378,
+        "protein": 57.8,
         "carbs": 0.0,
-        "fat": 8.0
+        "fat": 16.3
        },
        {
         "id": "tue-A-1-1",
@@ -413,11 +413,11 @@ window.PLAN = {
        },
        {
         "id": "tue-A-1-3",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -460,11 +460,11 @@ window.PLAN = {
        },
        {
         "id": "tue-A-2-4",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -508,7 +508,7 @@ window.PLAN = {
        },
        {
         "id": "tue-B-0-1",
-        "label": "30 g Balance bread snack",
+        "label": "30 g Balance crisps",
         "kcal": 120,
         "protein": 6.6,
         "carbs": 20.5,
@@ -531,11 +531,11 @@ window.PLAN = {
       "items": [
        {
         "id": "tue-B-1-0",
-        "label": "120 g extra lean minced beef (cooked)",
-        "kcal": 164,
-        "protein": 29.6,
+        "label": "120 g minced beef, 5% fat (pan-fried)",
+        "kcal": 239,
+        "protein": 36.5,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 10.3
        },
        {
         "id": "tue-B-1-1",
@@ -547,11 +547,11 @@ window.PLAN = {
        },
        {
         "id": "tue-B-1-2",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -578,11 +578,11 @@ window.PLAN = {
        },
        {
         "id": "tue-B-2-2",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        },
        {
         "id": "tue-B-2-3",
@@ -712,11 +712,11 @@ window.PLAN = {
        },
        {
         "id": "wed-A-1-3",
-        "label": "10 g olive oil (about 2 tsp)",
-        "kcal": 90,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 10.0
+        "fat": 13.7
        }
       ]
      },
@@ -774,11 +774,11 @@ window.PLAN = {
        },
        {
         "id": "wed-A-3-3",
-        "label": "20 g olive oil (about 4 tsp)",
-        "kcal": 180,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 20.0
+        "fat": 13.7
        }
       ]
      }
@@ -854,11 +854,11 @@ window.PLAN = {
        },
        {
         "id": "wed-B-1-3",
-        "label": "15 g olive oil (about 3 tsp)",
-        "kcal": 135,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 15.0
+        "fat": 13.7
        }
       ]
      },
@@ -908,11 +908,11 @@ window.PLAN = {
        },
        {
         "id": "wed-B-3-3",
-        "label": "15 g olive oil (about 3 tsp)",
-        "kcal": 135,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 15.0
+        "fat": 13.7
        }
       ]
      },
@@ -1018,11 +1018,11 @@ window.PLAN = {
        },
        {
         "id": "thu-A-1-3",
-        "label": "10 g olive oil (about 2 tsp)",
-        "kcal": 90,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 10.0
+        "fat": 13.7
        }
       ]
      },
@@ -1049,7 +1049,7 @@ window.PLAN = {
        },
        {
         "id": "thu-A-2-2",
-        "label": "20 g Balance bread snack",
+        "label": "20 g Balance crisps",
         "kcal": 80,
         "protein": 4.4,
         "carbs": 13.7,
@@ -1145,11 +1145,11 @@ window.PLAN = {
        },
        {
         "id": "thu-B-1-3",
-        "label": "10 g olive oil (about 2 tsp)",
-        "kcal": 90,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 10.0
+        "fat": 13.7
        }
       ]
      },
@@ -1263,11 +1263,11 @@ window.PLAN = {
        },
        {
         "id": "fri-A-1-3",
-        "label": "20 g olive oil (about 4 tsp)",
-        "kcal": 180,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 20.0
+        "fat": 13.7
        }
       ]
      },
@@ -1294,11 +1294,11 @@ window.PLAN = {
        },
        {
         "id": "fri-A-2-2",
-        "label": "15 g olive oil (about 3 tsp)",
-        "kcal": 135,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 15.0
+        "fat": 13.7
        }
       ]
      },
@@ -1317,7 +1317,7 @@ window.PLAN = {
        },
        {
         "id": "fri-A-3-1",
-        "label": "20 g Balance bread snack",
+        "label": "20 g Balance crisps",
         "kcal": 80,
         "protein": 4.4,
         "carbs": 13.7,
@@ -1405,11 +1405,11 @@ window.PLAN = {
        },
        {
         "id": "fri-B-1-3",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -1436,11 +1436,11 @@ window.PLAN = {
        },
        {
         "id": "fri-B-2-2",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        },
        {
         "id": "fri-B-2-3",
@@ -1570,11 +1570,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-1-3",
-        "label": "10 g olive oil (about 2 tsp)",
-        "kcal": 90,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 10.0
+        "fat": 13.7
        }
       ]
      },
@@ -1601,10 +1601,10 @@ window.PLAN = {
        },
        {
         "id": "sat-A-2-2",
-        "label": "7 g honey",
-        "kcal": 20,
-        "protein": 0.0,
-        "carbs": 5.3,
+        "label": "1 tablespoon honey",
+        "kcal": 60,
+        "protein": 0.1,
+        "carbs": 16.0,
         "fat": 0.0
        }
       ]
@@ -1616,11 +1616,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-A-3-0",
-        "label": "240 g extra lean minced beef (cooked)",
-        "kcal": 329,
-        "protein": 59.3,
+        "label": "240 g minced beef, 5% fat (pan-fried)",
+        "kcal": 478,
+        "protein": 73.0,
         "carbs": 0.0,
-        "fat": 10.1
+        "fat": 20.6
        },
        {
         "id": "sat-A-3-1",
@@ -1632,11 +1632,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-3-2",
-        "label": "20 g olive oil (about 4 tsp)",
-        "kcal": 180,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 20.0
+        "fat": 13.7
        }
       ]
      }
@@ -1712,11 +1712,11 @@ window.PLAN = {
        },
        {
         "id": "sat-B-1-3",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -1742,11 +1742,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-B-3-0",
-        "label": "190 g extra lean minced beef (cooked)",
-        "kcal": 260,
-        "protein": 46.9,
+        "label": "190 g minced beef, 5% fat (pan-fried)",
+        "kcal": 378,
+        "protein": 57.8,
         "carbs": 0.0,
-        "fat": 8.0
+        "fat": 16.3
        },
        {
         "id": "sat-B-3-1",
@@ -1758,11 +1758,11 @@ window.PLAN = {
        },
        {
         "id": "sat-B-3-2",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -1845,11 +1845,11 @@ window.PLAN = {
        },
        {
         "id": "sun-A-0-5",
-        "label": "5 g olive oil (about 1 tsp)",
-        "kcal": 45,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 5.0
+        "fat": 13.7
        }
       ]
      },
@@ -1884,11 +1884,11 @@ window.PLAN = {
        },
        {
         "id": "sun-A-1-3",
-        "label": "10 g olive oil (about 2 tsp)",
-        "kcal": 90,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 10.0
+        "fat": 13.7
        }
       ]
      },
@@ -2011,11 +2011,11 @@ window.PLAN = {
        },
        {
         "id": "sun-B-1-3",
-        "label": "10 g olive oil (about 2 tsp)",
-        "kcal": 90,
+        "label": "1 tablespoon olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 10.0
+        "fat": 13.7
        }
       ]
      },
