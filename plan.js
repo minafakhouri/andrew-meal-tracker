@@ -56,7 +56,7 @@ window.PLAN = {
      {
       "time": "08:30",
       "name": "Breakfast",
-      "note": "Scrambled eggs with turkey, toast, salad",
+      "note": "Scrambled eggs with turkey, toast, salad in the oil",
       "items": [
        {
         "id": "mon-A-0-0",
@@ -89,6 +89,14 @@ window.PLAN = {
         "protein": 0.9,
         "carbs": 1.9,
         "fat": 0.3
+       },
+       {
+        "id": "mon-A-0-4",
+        "label": "2 teaspoons olive oil",
+        "kcal": 82,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 9.1
        }
       ]
      },
@@ -99,19 +107,19 @@ window.PLAN = {
       "items": [
        {
         "id": "mon-A-1-0",
-        "label": "120 g chicken breast (cooked)",
-        "kcal": 178,
-        "protein": 38.4,
+        "label": "110 g chicken breast (cooked)",
+        "kcal": 163,
+        "protein": 35.2,
         "carbs": 0.0,
-        "fat": 2.6
+        "fat": 2.4
        },
        {
         "id": "mon-A-1-1",
-        "label": "240 g basmati rice (cooked)",
-        "kcal": 281,
-        "protein": 6.7,
-        "carbs": 63.6,
-        "fat": 1.7
+        "label": "270 g basmati rice (cooked)",
+        "kcal": 316,
+        "protein": 7.6,
+        "carbs": 71.6,
+        "fat": 1.9
        },
        {
         "id": "mon-A-1-2",
@@ -123,11 +131,11 @@ window.PLAN = {
        },
        {
         "id": "mon-A-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 4.6
        }
       ]
      },
@@ -154,10 +162,10 @@ window.PLAN = {
        },
        {
         "id": "mon-A-2-2",
-        "label": "1 tablespoon honey",
-        "kcal": 60,
-        "protein": 0.1,
-        "carbs": 16.0,
+        "label": "1 teaspoon honey",
+        "kcal": 20,
+        "protein": 0.0,
+        "carbs": 5.3,
         "fat": 0.0
        }
       ]
@@ -185,7 +193,7 @@ window.PLAN = {
        },
        {
         "id": "mon-A-3-2",
-        "label": "1 tablespoon olive oil",
+        "label": "3 teaspoons olive oil",
         "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
@@ -226,11 +234,11 @@ window.PLAN = {
        },
        {
         "id": "mon-B-0-3",
-        "label": "10 g cheddar",
-        "kcal": 42,
-        "protein": 2.5,
+        "label": "20 g cheddar",
+        "kcal": 83,
+        "protein": 5.1,
         "carbs": 0.0,
-        "fat": 3.5
+        "fat": 7.0
        }
       ]
      },
@@ -295,11 +303,11 @@ window.PLAN = {
        },
        {
         "id": "mon-B-3-2",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 4.6
        },
        {
         "id": "mon-B-3-3",
@@ -346,7 +354,7 @@ window.PLAN = {
      {
       "time": "09:00",
       "name": "Breakfast",
-      "note": "Yogurt cup, crisps, one boiled egg. Quick one",
+      "note": "Yogurt cup, bread snack, one boiled egg. Quick one",
       "items": [
        {
         "id": "tue-A-0-0",
@@ -358,7 +366,7 @@ window.PLAN = {
        },
        {
         "id": "tue-A-0-1",
-        "label": "30 g Balance crisps",
+        "label": "30 g Balance bread snack",
         "kcal": 120,
         "protein": 6.6,
         "carbs": 20.5,
@@ -381,11 +389,11 @@ window.PLAN = {
       "items": [
        {
         "id": "tue-A-1-0",
-        "label": "180 g minced beef, 5% fat (pan-fried)",
-        "kcal": 358,
-        "protein": 54.7,
+        "label": "190 g extra lean minced beef (cooked)",
+        "kcal": 260,
+        "protein": 46.9,
         "carbs": 0.0,
-        "fat": 15.5
+        "fat": 8.0
        },
        {
         "id": "tue-A-1-1",
@@ -402,13 +410,21 @@ window.PLAN = {
         "protein": 7.6,
         "carbs": 71.6,
         "fat": 1.9
+       },
+       {
+        "id": "tue-A-1-3",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
      {
       "time": "21:00",
       "name": "Dinner, after padel",
-      "note": "Turkey and cheddar omelette, salad",
+      "note": "Turkey and cheddar omelette, salad in the oil",
       "items": [
        {
         "id": "tue-A-2-0",
@@ -441,6 +457,14 @@ window.PLAN = {
         "protein": 1.4,
         "carbs": 2.8,
         "fat": 0.4
+       },
+       {
+        "id": "tue-A-2-4",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
@@ -472,7 +496,7 @@ window.PLAN = {
      {
       "time": "09:00",
       "name": "Breakfast",
-      "note": "Yogurt cup, crisps, two boiled eggs",
+      "note": "Yogurt cup, bread snack, two boiled eggs",
       "items": [
        {
         "id": "tue-B-0-0",
@@ -484,11 +508,11 @@ window.PLAN = {
        },
        {
         "id": "tue-B-0-1",
-        "label": "20 g Balance crisps",
-        "kcal": 80,
-        "protein": 4.4,
-        "carbs": 13.7,
-        "fat": 0.9
+        "label": "30 g Balance bread snack",
+        "kcal": 120,
+        "protein": 6.6,
+        "carbs": 20.5,
+        "fat": 1.3
        },
        {
         "id": "tue-B-0-2",
@@ -507,11 +531,11 @@ window.PLAN = {
       "items": [
        {
         "id": "tue-B-1-0",
-        "label": "120 g minced beef, 5% fat (pan-fried)",
-        "kcal": 239,
-        "protein": 36.5,
+        "label": "120 g extra lean minced beef (cooked)",
+        "kcal": 164,
+        "protein": 29.6,
         "carbs": 0.0,
-        "fat": 10.3
+        "fat": 5.0
        },
        {
         "id": "tue-B-1-1",
@@ -520,6 +544,14 @@ window.PLAN = {
         "protein": 6.6,
         "carbs": 13.2,
         "fat": 1.0
+       },
+       {
+        "id": "tue-B-1-2",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
@@ -546,11 +578,11 @@ window.PLAN = {
        },
        {
         "id": "tue-B-2-2",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 4.6
        },
        {
         "id": "tue-B-2-3",
@@ -680,11 +712,11 @@ window.PLAN = {
        },
        {
         "id": "wed-A-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "2 teaspoons olive oil",
+        "kcal": 82,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 9.1
        }
       ]
      },
@@ -718,11 +750,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-A-3-0",
-        "label": "190 g chicken breast (cooked)",
-        "kcal": 281,
-        "protein": 60.8,
+        "label": "180 g chicken breast (cooked)",
+        "kcal": 266,
+        "protein": 57.6,
         "carbs": 0.0,
-        "fat": 4.2
+        "fat": 4.0
        },
        {
         "id": "wed-A-3-1",
@@ -742,11 +774,11 @@ window.PLAN = {
        },
        {
         "id": "wed-A-3-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "4 teaspoons olive oil",
+        "kcal": 164,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 18.2
        }
       ]
      }
@@ -822,7 +854,7 @@ window.PLAN = {
        },
        {
         "id": "wed-B-1-3",
-        "label": "1 tablespoon olive oil",
+        "label": "3 teaspoons olive oil",
         "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
@@ -852,11 +884,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-B-3-0",
-        "label": "180 g chicken breast (cooked)",
-        "kcal": 266,
-        "protein": 57.6,
+        "label": "150 g chicken breast (cooked)",
+        "kcal": 222,
+        "protein": 48.0,
         "carbs": 0.0,
-        "fat": 4.0
+        "fat": 3.3
        },
        {
         "id": "wed-B-3-1",
@@ -876,7 +908,7 @@ window.PLAN = {
        },
        {
         "id": "wed-B-3-3",
-        "label": "1 tablespoon olive oil",
+        "label": "3 teaspoons olive oil",
         "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
@@ -931,11 +963,11 @@ window.PLAN = {
        },
        {
         "id": "thu-A-0-2",
-        "label": "60 g smoked turkey slices",
-        "kcal": 68,
-        "protein": 13.8,
-        "carbs": 0.7,
-        "fat": 1.1
+        "label": "40 g smoked turkey slices",
+        "kcal": 46,
+        "protein": 9.2,
+        "carbs": 0.5,
+        "fat": 0.8
        },
        {
         "id": "thu-A-0-3",
@@ -962,11 +994,11 @@ window.PLAN = {
       "items": [
        {
         "id": "thu-A-1-0",
-        "label": "215 g beef fillet (cooked)",
-        "kcal": 404,
-        "protein": 62.6,
+        "label": "225 g beef fillet (cooked)",
+        "kcal": 423,
+        "protein": 65.5,
         "carbs": 0.0,
-        "fat": 17.2
+        "fat": 18.0
        },
        {
         "id": "thu-A-1-1",
@@ -986,18 +1018,18 @@ window.PLAN = {
        },
        {
         "id": "thu-A-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "2 teaspoons olive oil",
+        "kcal": 82,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 9.1
        }
       ]
      },
      {
       "time": "22:30",
       "name": "Supper",
-      "note": "Cottage cheese on toast, crisps",
+      "note": "Cottage cheese on toast, bread snack",
       "items": [
        {
         "id": "thu-A-2-0",
@@ -1017,7 +1049,7 @@ window.PLAN = {
        },
        {
         "id": "thu-A-2-2",
-        "label": "20 g Balance crisps",
+        "label": "20 g Balance bread snack",
         "kcal": 80,
         "protein": 4.4,
         "carbs": 13.7,
@@ -1050,19 +1082,19 @@ window.PLAN = {
        },
        {
         "id": "thu-B-0-2",
-        "label": "10 g cheddar",
-        "kcal": 42,
-        "protein": 2.5,
+        "label": "20 g cheddar",
+        "kcal": 83,
+        "protein": 5.1,
         "carbs": 0.0,
-        "fat": 3.5
+        "fat": 7.0
        },
        {
         "id": "thu-B-0-3",
-        "label": "60 g smoked turkey slices",
-        "kcal": 68,
-        "protein": 13.8,
-        "carbs": 0.7,
-        "fat": 1.1
+        "label": "40 g smoked turkey slices",
+        "kcal": 46,
+        "protein": 9.2,
+        "carbs": 0.5,
+        "fat": 0.8
        },
        {
         "id": "thu-B-0-4",
@@ -1113,11 +1145,11 @@ window.PLAN = {
        },
        {
         "id": "thu-B-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "2 teaspoons olive oil",
+        "kcal": 82,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 9.1
        }
       ]
      },
@@ -1184,11 +1216,11 @@ window.PLAN = {
        },
        {
         "id": "fri-A-0-2",
-        "label": "4 large eggs",
-        "kcal": 338,
-        "protein": 33.3,
+        "label": "3 large eggs",
+        "kcal": 254,
+        "protein": 25.0,
         "carbs": 0.0,
-        "fat": 22.7
+        "fat": 17.0
        },
        {
         "id": "fri-A-0-3",
@@ -1215,10 +1247,10 @@ window.PLAN = {
        },
        {
         "id": "fri-A-1-1",
-        "label": "250 g basmati rice (cooked)",
-        "kcal": 292,
-        "protein": 7.0,
-        "carbs": 66.2,
+        "label": "260 g basmati rice (cooked)",
+        "kcal": 304,
+        "protein": 7.3,
+        "carbs": 68.9,
         "fat": 1.8
        },
        {
@@ -1231,11 +1263,11 @@ window.PLAN = {
        },
        {
         "id": "fri-A-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "4 teaspoons olive oil",
+        "kcal": 164,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 18.2
        }
       ]
      },
@@ -1262,7 +1294,7 @@ window.PLAN = {
        },
        {
         "id": "fri-A-2-2",
-        "label": "1 tablespoon olive oil",
+        "label": "3 teaspoons olive oil",
         "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
@@ -1273,7 +1305,7 @@ window.PLAN = {
      {
       "time": "23:00",
       "name": "Supper",
-      "note": "Yogurt cup, crisps, apple",
+      "note": "Yogurt cup, bread snack, apple",
       "items": [
        {
         "id": "fri-A-3-0",
@@ -1285,7 +1317,7 @@ window.PLAN = {
        },
        {
         "id": "fri-A-3-1",
-        "label": "20 g Balance crisps",
+        "label": "20 g Balance bread snack",
         "kcal": 80,
         "protein": 4.4,
         "carbs": 13.7,
@@ -1349,11 +1381,11 @@ window.PLAN = {
       "items": [
        {
         "id": "fri-B-1-0",
-        "label": "140 g chicken breast (cooked)",
-        "kcal": 207,
-        "protein": 44.8,
+        "label": "130 g chicken breast (cooked)",
+        "kcal": 192,
+        "protein": 41.6,
         "carbs": 0.0,
-        "fat": 3.1
+        "fat": 2.9
        },
        {
         "id": "fri-B-1-1",
@@ -1370,6 +1402,14 @@ window.PLAN = {
         "protein": 6.6,
         "carbs": 13.2,
         "fat": 1.0
+       },
+       {
+        "id": "fri-B-1-3",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
@@ -1396,11 +1436,11 @@ window.PLAN = {
        },
        {
         "id": "fri-B-2-2",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 4.6
        },
        {
         "id": "fri-B-2-3",
@@ -1459,11 +1499,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-A-0-0",
-        "label": "2 large eggs",
-        "kcal": 169,
-        "protein": 16.7,
+        "label": "3 large eggs",
+        "kcal": 254,
+        "protein": 25.0,
         "carbs": 0.0,
-        "fat": 11.3
+        "fat": 17.0
        },
        {
         "id": "sat-A-0-1",
@@ -1514,11 +1554,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-1-1",
-        "label": "120 g basmati rice (cooked)",
-        "kcal": 140,
-        "protein": 3.4,
-        "carbs": 31.8,
-        "fat": 0.8
+        "label": "160 g basmati rice (cooked)",
+        "kcal": 187,
+        "protein": 4.5,
+        "carbs": 42.4,
+        "fat": 1.1
        },
        {
         "id": "sat-A-1-2",
@@ -1530,11 +1570,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "2 teaspoons olive oil",
+        "kcal": 82,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 9.1
        }
       ]
      },
@@ -1561,10 +1601,10 @@ window.PLAN = {
        },
        {
         "id": "sat-A-2-2",
-        "label": "1 tablespoon honey",
-        "kcal": 60,
-        "protein": 0.1,
-        "carbs": 16.0,
+        "label": "1 teaspoon honey",
+        "kcal": 20,
+        "protein": 0.0,
+        "carbs": 5.3,
         "fat": 0.0
        }
       ]
@@ -1576,11 +1616,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-A-3-0",
-        "label": "240 g minced beef, 5% fat (pan-fried)",
-        "kcal": 478,
-        "protein": 73.0,
+        "label": "240 g extra lean minced beef (cooked)",
+        "kcal": 329,
+        "protein": 59.3,
         "carbs": 0.0,
-        "fat": 20.6
+        "fat": 10.1
        },
        {
         "id": "sat-A-3-1",
@@ -1592,11 +1632,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-3-2",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "4 teaspoons olive oil",
+        "kcal": 164,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 18.2
        }
       ]
      }
@@ -1648,11 +1688,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-B-1-0",
-        "label": "90 g tuna in water (drained)",
-        "kcal": 98,
-        "protein": 22.4,
+        "label": "120 g tuna in water (drained)",
+        "kcal": 131,
+        "protein": 29.9,
         "carbs": 0.0,
-        "fat": 0.9
+        "fat": 1.2
        },
        {
         "id": "sat-B-1-1",
@@ -1669,6 +1709,14 @@ window.PLAN = {
         "protein": 4.9,
         "carbs": 9.9,
         "fat": 0.8
+       },
+       {
+        "id": "sat-B-1-3",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
@@ -1694,11 +1742,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-B-3-0",
-        "label": "190 g minced beef, 5% fat (pan-fried)",
-        "kcal": 378,
-        "protein": 57.8,
+        "label": "190 g extra lean minced beef (cooked)",
+        "kcal": 260,
+        "protein": 46.9,
         "carbs": 0.0,
-        "fat": 16.3
+        "fat": 8.0
        },
        {
         "id": "sat-B-3-1",
@@ -1707,6 +1755,14 @@ window.PLAN = {
         "protein": 8.2,
         "carbs": 16.5,
         "fat": 1.2
+       },
+       {
+        "id": "sat-B-3-2",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
@@ -1745,7 +1801,7 @@ window.PLAN = {
      {
       "time": "11:00",
       "name": "Brunch",
-      "note": "Big omelette with cheddar and turkey, toast, salad",
+      "note": "Big omelette with cheddar and turkey, toast, salad in the oil",
       "items": [
        {
         "id": "sun-A-0-0",
@@ -1786,6 +1842,14 @@ window.PLAN = {
         "protein": 1.4,
         "carbs": 2.8,
         "fat": 0.4
+       },
+       {
+        "id": "sun-A-0-5",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
@@ -1796,11 +1860,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sun-A-1-0",
-        "label": "200 g chicken breast (cooked)",
-        "kcal": 296,
-        "protein": 64.0,
+        "label": "190 g chicken breast (cooked)",
+        "kcal": 281,
+        "protein": 60.8,
         "carbs": 0.0,
-        "fat": 4.4
+        "fat": 4.2
        },
        {
         "id": "sun-A-1-1",
@@ -1820,11 +1884,11 @@ window.PLAN = {
        },
        {
         "id": "sun-A-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "2 teaspoons olive oil",
+        "kcal": 82,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 9.1
        }
       ]
      },
@@ -1923,11 +1987,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sun-B-1-0",
-        "label": "220 g chicken breast (cooked)",
-        "kcal": 326,
-        "protein": 70.4,
+        "label": "210 g chicken breast (cooked)",
+        "kcal": 311,
+        "protein": 67.2,
         "carbs": 0.0,
-        "fat": 4.8
+        "fat": 4.6
        },
        {
         "id": "sun-B-1-1",
@@ -1947,11 +2011,11 @@ window.PLAN = {
        },
        {
         "id": "sun-B-1-3",
-        "label": "1 tablespoon olive oil",
-        "kcal": 123,
+        "label": "2 teaspoons olive oil",
+        "kcal": 82,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 13.7
+        "fat": 9.1
        }
       ]
      },
