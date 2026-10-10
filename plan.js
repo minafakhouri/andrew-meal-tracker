@@ -283,7 +283,7 @@ window.PLAN = {
      {
       "time": "21:30",
       "name": "Dinner, before the drinks",
-      "note": "Tuna and veg with toast. Eat this before the first can",
+      "note": "Tuna on toast, nothing else with it. Eat this before the first can",
       "items": [
        {
         "id": "mon-B-3-0",
@@ -295,14 +295,6 @@ window.PLAN = {
        },
        {
         "id": "mon-B-3-1",
-        "label": "100 g steamed mixed veg",
-        "kcal": 42,
-        "protein": 3.3,
-        "carbs": 6.6,
-        "fat": 0.5
-       },
-       {
-        "id": "mon-B-3-2",
         "label": "2 slices Domty high protein toast",
         "kcal": 170,
         "protein": 9.2,
@@ -318,11 +310,11 @@ window.PLAN = {
       "items": [
        {
         "id": "mon-B-4-0",
-        "label": "50 g cottage cheese",
-        "kcal": 34,
-        "protein": 5.3,
-        "carbs": 1.6,
-        "fat": 0.8
+        "label": "60 g cottage cheese",
+        "kcal": 41,
+        "protein": 6.4,
+        "carbs": 2.0,
+        "fat": 0.9
        },
        {
         "id": "mon-B-4-1",
@@ -617,11 +609,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-A-0-0",
-        "label": "150 g cottage cheese",
-        "kcal": 102,
-        "protein": 15.9,
-        "carbs": 4.9,
-        "fat": 2.2
+        "label": "230 g cottage cheese",
+        "kcal": 156,
+        "protein": 24.4,
+        "carbs": 7.6,
+        "fat": 3.4
        },
        {
         "id": "wed-A-0-1",
@@ -660,7 +652,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Tuna on toast, salad in the oil. Tuna in oil, drained",
+      "note": "Tuna on toast, nothing else with it. Tuna in oil, drained",
       "items": [
        {
         "id": "wed-A-1-0",
@@ -677,22 +669,6 @@ window.PLAN = {
         "protein": 9.2,
         "carbs": 28.4,
         "fat": 2.2
-       },
-       {
-        "id": "wed-A-1-2",
-        "label": "150 g salad veg (cucumber, tomato, leaves)",
-        "kcal": 20,
-        "protein": 1.4,
-        "carbs": 2.8,
-        "fat": 0.4
-       },
-       {
-        "id": "wed-A-1-3",
-        "label": "3 teaspoons olive oil",
-        "kcal": 123,
-        "protein": 0.0,
-        "carbs": 0.0,
-        "fat": 13.7
        }
       ]
      },
@@ -718,11 +694,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-A-3-0",
-        "label": "180 g chicken breast (cooked)",
-        "kcal": 266,
-        "protein": 57.6,
+        "label": "160 g chicken breast (cooked)",
+        "kcal": 237,
+        "protein": 51.2,
         "carbs": 0.0,
-        "fat": 4.0
+        "fat": 3.5
        },
        {
         "id": "wed-A-3-1",
@@ -742,11 +718,11 @@ window.PLAN = {
        },
        {
         "id": "wed-A-3-3",
-        "label": "4 teaspoons olive oil",
-        "kcal": 164,
+        "label": "6 teaspoons olive oil",
+        "kcal": 246,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 18.2
+        "fat": 27.4
        }
       ]
      }
@@ -794,7 +770,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Tuna on toast with salad. Tuna in water today",
+      "note": "Tuna on toast, nothing else with it. Tuna in water today",
       "items": [
        {
         "id": "wed-B-1-0",
@@ -811,14 +787,6 @@ window.PLAN = {
         "protein": 9.2,
         "carbs": 28.4,
         "fat": 2.2
-       },
-       {
-        "id": "wed-B-1-2",
-        "label": "50 g salad veg (cucumber, tomato, leaves)",
-        "kcal": 6,
-        "protein": 0.5,
-        "carbs": 0.9,
-        "fat": 0.1
        }
       ]
      },
@@ -1132,7 +1100,7 @@ window.PLAN = {
      {
       "time": "08:30",
       "name": "Breakfast",
-      "note": "Boiled eggs, cottage cheese on toast, tomato and cucumber",
+      "note": "Boiled eggs, cottage cheese on toast, tomato and cucumber in the oil",
       "items": [
        {
         "id": "fri-A-0-0",
@@ -1165,6 +1133,14 @@ window.PLAN = {
         "protein": 0.9,
         "carbs": 1.9,
         "fat": 0.3
+       },
+       {
+        "id": "fri-A-0-4",
+        "label": "3 teaspoons olive oil",
+        "kcal": 123,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 13.7
        }
       ]
      },
@@ -1210,7 +1186,7 @@ window.PLAN = {
      {
       "time": "21:00",
       "name": "Dinner, after padel",
-      "note": "Tuna on toast, big salad with oil and lemon dressing",
+      "note": "Tuna on toast, nothing else with it",
       "items": [
        {
         "id": "fri-A-2-0",
@@ -1227,22 +1203,6 @@ window.PLAN = {
         "protein": 9.2,
         "carbs": 28.4,
         "fat": 2.2
-       },
-       {
-        "id": "fri-A-2-2",
-        "label": "200 g salad veg (cucumber, tomato, leaves)",
-        "kcal": 26,
-        "protein": 1.8,
-        "carbs": 3.7,
-        "fat": 0.5
-       },
-       {
-        "id": "fri-A-2-3",
-        "label": "3 teaspoons olive oil",
-        "kcal": 123,
-        "protein": 0.0,
-        "carbs": 0.0,
-        "fat": 13.7
        }
       ]
      },
@@ -1278,11 +1238,11 @@ window.PLAN = {
       "items": [
        {
         "id": "fri-B-0-0",
-        "label": "90 g cottage cheese",
-        "kcal": 61,
-        "protein": 9.5,
-        "carbs": 3.0,
-        "fat": 1.4
+        "label": "100 g cottage cheese",
+        "kcal": 68,
+        "protein": 10.6,
+        "carbs": 3.3,
+        "fat": 1.5
        },
        {
         "id": "fri-B-0-1",
@@ -1336,7 +1296,7 @@ window.PLAN = {
      {
       "time": "21:00",
       "name": "Dinner, before the drinks",
-      "note": "Tuna on toast with salad. Eat before the first can",
+      "note": "Tuna on toast, nothing else with it. Eat before the first can",
       "items": [
        {
         "id": "fri-B-2-0",
@@ -1353,14 +1313,6 @@ window.PLAN = {
         "protein": 9.2,
         "carbs": 28.4,
         "fat": 2.2
-       },
-       {
-        "id": "fri-B-2-2",
-        "label": "50 g salad veg (cucumber, tomato, leaves)",
-        "kcal": 6,
-        "protein": 0.5,
-        "carbs": 0.9,
-        "fat": 0.1
        }
       ]
      },
@@ -1399,7 +1351,7 @@ window.PLAN = {
      {
       "time": "10:00",
       "name": "Breakfast",
-      "note": "Eggs with turkey and cheddar on toast, salad on the side",
+      "note": "Eggs with turkey and cheddar on toast, salad in the oil",
       "items": [
        {
         "id": "sat-A-0-0",
@@ -1440,13 +1392,21 @@ window.PLAN = {
         "protein": 0.9,
         "carbs": 1.9,
         "fat": 0.3
+       },
+       {
+        "id": "sat-A-0-5",
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 4.6
        }
       ]
      },
      {
       "time": "14:30",
       "name": "Lunch",
-      "note": "Tuna on toast, veg with the oil over it",
+      "note": "Tuna on toast, nothing else with it",
       "items": [
        {
         "id": "sat-A-1-0",
@@ -1463,22 +1423,6 @@ window.PLAN = {
         "protein": 9.2,
         "carbs": 28.4,
         "fat": 2.2
-       },
-       {
-        "id": "sat-A-1-2",
-        "label": "150 g steamed mixed veg",
-        "kcal": 63,
-        "protein": 4.9,
-        "carbs": 9.9,
-        "fat": 0.8
-       },
-       {
-        "id": "sat-A-1-3",
-        "label": "2 teaspoons olive oil",
-        "kcal": 82,
-        "protein": 0.0,
-        "carbs": 0.0,
-        "fat": 9.1
        }
       ]
      },
@@ -1520,11 +1464,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-3-1",
-        "label": "150 g Farm Frites thin fries (air-fried, no oil)",
-        "kcal": 284,
-        "protein": 4.8,
-        "carbs": 52.9,
-        "fat": 7.4
+        "label": "200 g Farm Frites thin fries (air-fried, no oil)",
+        "kcal": 378,
+        "protein": 6.4,
+        "carbs": 70.6,
+        "fat": 9.8
        },
        {
         "id": "sat-A-3-2",
@@ -1580,7 +1524,7 @@ window.PLAN = {
      {
       "time": "14:30",
       "name": "Lunch",
-      "note": "Tuna on toast, veg on the side",
+      "note": "Tuna on toast, nothing else with it",
       "items": [
        {
         "id": "sat-B-1-0",
@@ -1597,14 +1541,6 @@ window.PLAN = {
         "protein": 9.2,
         "carbs": 28.4,
         "fat": 2.2
-       },
-       {
-        "id": "sat-B-1-2",
-        "label": "100 g steamed mixed veg",
-        "kcal": 42,
-        "protein": 3.3,
-        "carbs": 6.6,
-        "fat": 0.5
        }
       ]
      },
@@ -1630,11 +1566,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-B-3-0",
-        "label": "170 g extra lean minced beef (cooked)",
-        "kcal": 233,
-        "protein": 42.0,
+        "label": "190 g extra lean minced beef (cooked)",
+        "kcal": 260,
+        "protein": 46.9,
         "carbs": 0.0,
-        "fat": 7.1
+        "fat": 8.0
        },
        {
         "id": "sat-B-3-1",
