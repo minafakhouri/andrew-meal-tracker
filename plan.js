@@ -609,11 +609,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-A-0-0",
-        "label": "230 g cottage cheese",
-        "kcal": 156,
-        "protein": 24.4,
-        "carbs": 7.6,
-        "fat": 3.4
+        "label": "140 g cottage cheese",
+        "kcal": 95,
+        "protein": 14.8,
+        "carbs": 4.6,
+        "fat": 2.1
        },
        {
         "id": "wed-A-0-1",
@@ -656,11 +656,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-A-1-0",
-        "label": "110 g tuna in sunflower oil (drained)",
-        "kcal": 175,
-        "protein": 27.9,
+        "label": "140 g tuna in sunflower oil (drained)",
+        "kcal": 223,
+        "protein": 35.6,
         "carbs": 0.0,
-        "fat": 7.0
+        "fat": 9.0
        },
        {
         "id": "wed-A-1-1",
@@ -690,7 +690,7 @@ window.PLAN = {
      {
       "time": "21:30",
       "name": "Dinner",
-      "note": "Grilled chicken, thin fries from the air fryer with no oil, a small spoon of rice, veg in the oil",
+      "note": "Grilled chicken, thin fries from the air fryer with no oil, veg in the oil. No rice with the fries",
       "items": [
        {
         "id": "wed-A-3-0",
@@ -702,22 +702,14 @@ window.PLAN = {
        },
        {
         "id": "wed-A-3-1",
-        "label": "200 g Farm Frites thin fries (weighed frozen, air-fried with no oil)",
-        "kcal": 230,
-        "protein": 4.6,
-        "carbs": 42.2,
-        "fat": 7.8
+        "label": "350 g Farm Frites thin fries (weighed frozen, air-fried with no oil)",
+        "kcal": 402,
+        "protein": 8.0,
+        "carbs": 73.9,
+        "fat": 13.7
        },
        {
         "id": "wed-A-3-2",
-        "label": "100 g basmati rice (cooked)",
-        "kcal": 117,
-        "protein": 2.8,
-        "carbs": 26.5,
-        "fat": 0.7
-       },
-       {
-        "id": "wed-A-3-3",
         "label": "250 g steamed mixed veg",
         "kcal": 105,
         "protein": 8.2,
@@ -725,12 +717,12 @@ window.PLAN = {
         "fat": 1.2
        },
        {
-        "id": "wed-A-3-4",
-        "label": "6 teaspoons olive oil",
-        "kcal": 246,
+        "id": "wed-A-3-3",
+        "label": "5 teaspoons olive oil",
+        "kcal": 205,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 27.4
+        "fat": 22.8
        }
       ]
      }
@@ -1379,11 +1371,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-0-2",
-        "label": "30 g cheddar slices",
-        "kcal": 89,
-        "protein": 5.3,
-        "carbs": 1.5,
-        "fat": 6.9
+        "label": "10 g cheddar slices",
+        "kcal": 30,
+        "protein": 1.8,
+        "carbs": 0.5,
+        "fat": 2.3
        },
        {
         "id": "sat-A-0-3",
@@ -1418,11 +1410,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-A-1-0",
-        "label": "120 g tuna in water (drained)",
-        "kcal": 131,
-        "protein": 29.9,
+        "label": "140 g tuna in water (drained)",
+        "kcal": 153,
+        "protein": 34.9,
         "carbs": 0.0,
-        "fat": 1.2
+        "fat": 1.4
        },
        {
         "id": "sat-A-1-1",
@@ -1437,7 +1429,7 @@ window.PLAN = {
      {
       "time": "20:30",
       "name": "After the gym",
-      "note": "Shake with water, honey stirred in",
+      "note": "Shake with water",
       "items": [
        {
         "id": "sat-A-2-0",
@@ -1446,21 +1438,13 @@ window.PLAN = {
         "protein": 26.0,
         "carbs": 1.0,
         "fat": 0.5
-       },
-       {
-        "id": "sat-A-2-1",
-        "label": "1 teaspoon honey",
-        "kcal": 20,
-        "protein": 0.0,
-        "carbs": 5.3,
-        "fat": 0.0
        }
       ]
      },
      {
       "time": "21:30",
       "name": "Dinner",
-      "note": "Mince with onion, garlic and spices, thin fries from the air fryer with no oil, a small spoon of rice, veg in the oil",
+      "note": "Mince with onion, garlic and spices, thin fries from the air fryer with no oil, veg in the oil. No rice with the fries",
       "items": [
        {
         "id": "sat-A-3-0",
@@ -1472,22 +1456,14 @@ window.PLAN = {
        },
        {
         "id": "sat-A-3-1",
-        "label": "200 g Farm Frites thin fries (weighed frozen, air-fried with no oil)",
-        "kcal": 230,
-        "protein": 4.6,
-        "carbs": 42.2,
-        "fat": 7.8
+        "label": "350 g Farm Frites thin fries (weighed frozen, air-fried with no oil)",
+        "kcal": 402,
+        "protein": 8.0,
+        "carbs": 73.9,
+        "fat": 13.7
        },
        {
         "id": "sat-A-3-2",
-        "label": "100 g basmati rice (cooked)",
-        "kcal": 117,
-        "protein": 2.8,
-        "carbs": 26.5,
-        "fat": 0.7
-       },
-       {
-        "id": "sat-A-3-3",
         "label": "250 g steamed mixed veg",
         "kcal": 105,
         "protein": 8.2,
@@ -1495,7 +1471,7 @@ window.PLAN = {
         "fat": 1.2
        },
        {
-        "id": "sat-A-3-4",
+        "id": "sat-A-3-3",
         "label": "4 teaspoons olive oil",
         "kcal": 164,
         "protein": 0.0,
