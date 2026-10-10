@@ -92,18 +92,18 @@ window.PLAN = {
        },
        {
         "id": "mon-A-0-4",
-        "label": "2 teaspoons olive oil",
-        "kcal": 82,
+        "label": "1 teaspoon olive oil",
+        "kcal": 41,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 9.1
+        "fat": 4.6
        }
       ]
      },
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Grilled chicken, rice, steamed veg with the oil over it",
+      "note": "Grilled chicken, a small spoon of rice (the fries tonight are the carbs), steamed veg with the oil over it",
       "items": [
        {
         "id": "mon-A-1-0",
@@ -115,11 +115,11 @@ window.PLAN = {
        },
        {
         "id": "mon-A-1-1",
-        "label": "250 g basmati rice (cooked)",
-        "kcal": 292,
-        "protein": 7.0,
-        "carbs": 66.2,
-        "fat": 1.8
+        "label": "60 g basmati rice (cooked)",
+        "kcal": 70,
+        "protein": 1.7,
+        "carbs": 15.9,
+        "fat": 0.4
        },
        {
         "id": "mon-A-1-2",
@@ -142,7 +142,7 @@ window.PLAN = {
      {
       "time": "20:45",
       "name": "After the gym",
-      "note": "Shake with water, banana on the side",
+      "note": "Shake with water, honey stirred in",
       "items": [
        {
         "id": "mon-A-2-0",
@@ -154,14 +154,6 @@ window.PLAN = {
        },
        {
         "id": "mon-A-2-1",
-        "label": "100 g banana",
-        "kcal": 81,
-        "protein": 1.2,
-        "carbs": 20.3,
-        "fat": 0.1
-       },
-       {
-        "id": "mon-A-2-2",
         "label": "1 teaspoon honey",
         "kcal": 20,
         "protein": 0.0,
@@ -173,7 +165,7 @@ window.PLAN = {
      {
       "time": "21:30",
       "name": "Dinner",
-      "note": "Pan-seared fillet, veg in the oil",
+      "note": "Pan-seared fillet, thin fries from the air fryer with no oil, veg in the oil",
       "items": [
        {
         "id": "mon-A-3-0",
@@ -185,6 +177,14 @@ window.PLAN = {
        },
        {
         "id": "mon-A-3-1",
+        "label": "200 g Farm Frites thin fries (air-fried, no oil)",
+        "kcal": 378,
+        "protein": 6.4,
+        "carbs": 70.6,
+        "fat": 9.8
+       },
+       {
+        "id": "mon-A-3-2",
         "label": "250 g steamed mixed veg",
         "kcal": 105,
         "protein": 8.2,
@@ -192,7 +192,7 @@ window.PLAN = {
         "fat": 1.2
        },
        {
-        "id": "mon-A-3-2",
+        "id": "mon-A-3-3",
         "label": "3 teaspoons olive oil",
         "kcal": 123,
         "protein": 0.0,
@@ -245,7 +245,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "Grilled chicken, steamed veg, no rice or oil today. The wrap tonight is the carbs",
+      "note": "Grilled chicken, steamed veg, no rice or oil today. The toast tonight is the carbs",
       "items": [
        {
         "id": "mon-B-1-0",
@@ -283,7 +283,7 @@ window.PLAN = {
      {
       "time": "21:30",
       "name": "Dinner, before the drinks",
-      "note": "Tuna and veg wrap. Eat this before the first can",
+      "note": "Tuna and veg with toast. Eat this before the first can",
       "items": [
        {
         "id": "mon-B-3-0",
@@ -303,11 +303,11 @@ window.PLAN = {
        },
        {
         "id": "mon-B-3-2",
-        "label": "1 large bran tortilla (90 g)",
-        "kcal": 250,
-        "protein": 7.0,
-        "carbs": 53.0,
-        "fat": 1.0
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
        }
       ]
      },
@@ -617,11 +617,11 @@ window.PLAN = {
       "items": [
        {
         "id": "wed-A-0-0",
-        "label": "200 g cottage cheese",
-        "kcal": 136,
-        "protein": 21.2,
-        "carbs": 6.6,
-        "fat": 3.0
+        "label": "150 g cottage cheese",
+        "kcal": 102,
+        "protein": 15.9,
+        "carbs": 4.9,
+        "fat": 2.2
        },
        {
         "id": "wed-A-0-1",
@@ -660,7 +660,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "One big tuna wrap with salad in the oil. Tuna in oil, drained",
+      "note": "Tuna on toast, salad in the oil. Tuna in oil, drained",
       "items": [
        {
         "id": "wed-A-1-0",
@@ -672,11 +672,11 @@ window.PLAN = {
        },
        {
         "id": "wed-A-1-1",
-        "label": "1 large bran tortilla (90 g)",
-        "kcal": 250,
-        "protein": 7.0,
-        "carbs": 53.0,
-        "fat": 1.0
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
        },
        {
         "id": "wed-A-1-2",
@@ -688,18 +688,18 @@ window.PLAN = {
        },
        {
         "id": "wed-A-1-3",
-        "label": "4 teaspoons olive oil",
-        "kcal": 164,
+        "label": "3 teaspoons olive oil",
+        "kcal": 123,
         "protein": 0.0,
         "carbs": 0.0,
-        "fat": 18.2
+        "fat": 13.7
        }
       ]
      },
      {
       "time": "20:45",
       "name": "After the gym",
-      "note": "Shake with water, banana on the side",
+      "note": "Shake with water",
       "items": [
        {
         "id": "wed-A-2-0",
@@ -708,21 +708,13 @@ window.PLAN = {
         "protein": 26.0,
         "carbs": 1.0,
         "fat": 0.5
-       },
-       {
-        "id": "wed-A-2-1",
-        "label": "100 g banana",
-        "kcal": 81,
-        "protein": 1.2,
-        "carbs": 20.3,
-        "fat": 0.1
        }
       ]
      },
      {
       "time": "21:30",
       "name": "Dinner",
-      "note": "Grilled chicken, a small spoon of rice, veg in the oil",
+      "note": "Grilled chicken, thin fries from the air fryer with no oil, veg in the oil. No rice tonight",
       "items": [
        {
         "id": "wed-A-3-0",
@@ -734,19 +726,19 @@ window.PLAN = {
        },
        {
         "id": "wed-A-3-1",
+        "label": "200 g Farm Frites thin fries (air-fried, no oil)",
+        "kcal": 378,
+        "protein": 6.4,
+        "carbs": 70.6,
+        "fat": 9.8
+       },
+       {
+        "id": "wed-A-3-2",
         "label": "250 g steamed mixed veg",
         "kcal": 105,
         "protein": 8.2,
         "carbs": 16.5,
         "fat": 1.2
-       },
-       {
-        "id": "wed-A-3-2",
-        "label": "90 g basmati rice (cooked)",
-        "kcal": 105,
-        "protein": 2.5,
-        "carbs": 23.9,
-        "fat": 0.6
        },
        {
         "id": "wed-A-3-3",
@@ -802,7 +794,7 @@ window.PLAN = {
      {
       "time": "13:30",
       "name": "Lunch",
-      "note": "One tuna wrap with salad. Tuna in water today",
+      "note": "Tuna on toast with salad. Tuna in water today",
       "items": [
        {
         "id": "wed-B-1-0",
@@ -814,11 +806,11 @@ window.PLAN = {
        },
        {
         "id": "wed-B-1-1",
-        "label": "1 large bran tortilla (90 g)",
-        "kcal": 250,
-        "protein": 7.0,
-        "carbs": 53.0,
-        "fat": 1.0
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
        },
        {
         "id": "wed-B-1-2",
@@ -1191,11 +1183,11 @@ window.PLAN = {
        },
        {
         "id": "fri-A-1-1",
-        "label": "250 g basmati rice (cooked)",
-        "kcal": 292,
-        "protein": 7.0,
-        "carbs": 66.2,
-        "fat": 1.8
+        "label": "170 g basmati rice (cooked)",
+        "kcal": 199,
+        "protein": 4.8,
+        "carbs": 45.0,
+        "fat": 1.2
        },
        {
         "id": "fri-A-1-2",
@@ -1218,7 +1210,7 @@ window.PLAN = {
      {
       "time": "21:00",
       "name": "Dinner, after padel",
-      "note": "Big tuna salad, oil and lemon dressing",
+      "note": "Tuna on toast, big salad with oil and lemon dressing",
       "items": [
        {
         "id": "fri-A-2-0",
@@ -1230,6 +1222,14 @@ window.PLAN = {
        },
        {
         "id": "fri-A-2-1",
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
+       },
+       {
+        "id": "fri-A-2-2",
         "label": "200 g salad veg (cucumber, tomato, leaves)",
         "kcal": 26,
         "protein": 1.8,
@@ -1237,7 +1237,7 @@ window.PLAN = {
         "fat": 0.5
        },
        {
-        "id": "fri-A-2-2",
+        "id": "fri-A-2-3",
         "label": "3 teaspoons olive oil",
         "kcal": 123,
         "protein": 0.0,
@@ -1249,7 +1249,7 @@ window.PLAN = {
      {
       "time": "23:00",
       "name": "Supper",
-      "note": "Yogurt cup, crisps, apple",
+      "note": "Yogurt cup, apple",
       "items": [
        {
         "id": "fri-A-3-0",
@@ -1261,14 +1261,6 @@ window.PLAN = {
        },
        {
         "id": "fri-A-3-1",
-        "label": "10 g Balance protein crisps",
-        "kcal": 40,
-        "protein": 2.3,
-        "carbs": 5.4,
-        "fat": 1.3
-       },
-       {
-        "id": "fri-A-3-2",
         "label": "150 g apple",
         "kcal": 76,
         "protein": 0.9,
@@ -1286,11 +1278,11 @@ window.PLAN = {
       "items": [
        {
         "id": "fri-B-0-0",
-        "label": "50 g cottage cheese",
-        "kcal": 34,
-        "protein": 5.3,
-        "carbs": 1.6,
-        "fat": 0.8
+        "label": "90 g cottage cheese",
+        "kcal": 61,
+        "protein": 9.5,
+        "carbs": 3.0,
+        "fat": 1.4
        },
        {
         "id": "fri-B-0-1",
@@ -1344,7 +1336,7 @@ window.PLAN = {
      {
       "time": "21:00",
       "name": "Dinner, before the drinks",
-      "note": "Tuna salad wrap with cheddar. Eat before the first can",
+      "note": "Tuna on toast with salad. Eat before the first can",
       "items": [
        {
         "id": "fri-B-2-0",
@@ -1356,27 +1348,19 @@ window.PLAN = {
        },
        {
         "id": "fri-B-2-1",
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
+       },
+       {
+        "id": "fri-B-2-2",
         "label": "50 g salad veg (cucumber, tomato, leaves)",
         "kcal": 6,
         "protein": 0.5,
         "carbs": 0.9,
         "fat": 0.1
-       },
-       {
-        "id": "fri-B-2-2",
-        "label": "1 large bran tortilla (90 g)",
-        "kcal": 250,
-        "protein": 7.0,
-        "carbs": 53.0,
-        "fat": 1.0
-       },
-       {
-        "id": "fri-B-2-3",
-        "label": "10 g cheddar slices",
-        "kcal": 30,
-        "protein": 1.8,
-        "carbs": 0.5,
-        "fat": 2.3
        }
       ]
      },
@@ -1415,23 +1399,23 @@ window.PLAN = {
      {
       "time": "10:00",
       "name": "Breakfast",
-      "note": "Egg, turkey and cheddar wrap, salad on the side",
+      "note": "Eggs with turkey and cheddar on toast, salad on the side",
       "items": [
        {
         "id": "sat-A-0-0",
-        "label": "4 large eggs",
-        "kcal": 338,
-        "protein": 33.3,
+        "label": "3 large eggs",
+        "kcal": 254,
+        "protein": 25.0,
         "carbs": 0.0,
-        "fat": 22.7
+        "fat": 17.0
        },
        {
         "id": "sat-A-0-1",
-        "label": "20 g smoked turkey slices",
-        "kcal": 23,
-        "protein": 4.6,
-        "carbs": 0.2,
-        "fat": 0.4
+        "label": "10 g smoked turkey slices",
+        "kcal": 11,
+        "protein": 2.3,
+        "carbs": 0.1,
+        "fat": 0.2
        },
        {
         "id": "sat-A-0-2",
@@ -1443,11 +1427,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-0-3",
-        "label": "1 large bran tortilla (90 g)",
-        "kcal": 250,
-        "protein": 7.0,
-        "carbs": 53.0,
-        "fat": 1.0
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
        },
        {
         "id": "sat-A-0-4",
@@ -1462,7 +1446,7 @@ window.PLAN = {
      {
       "time": "14:30",
       "name": "Lunch",
-      "note": "Tuna with rice and veg, oil over the top",
+      "note": "Tuna on toast, veg with the oil over it",
       "items": [
        {
         "id": "sat-A-1-0",
@@ -1474,11 +1458,11 @@ window.PLAN = {
        },
        {
         "id": "sat-A-1-1",
-        "label": "160 g basmati rice (cooked)",
-        "kcal": 187,
-        "protein": 4.5,
-        "carbs": 42.4,
-        "fat": 1.1
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
        },
        {
         "id": "sat-A-1-2",
@@ -1501,7 +1485,7 @@ window.PLAN = {
      {
       "time": "20:30",
       "name": "After the gym",
-      "note": "Shake with water, banana on the side",
+      "note": "Shake with water, honey stirred in",
       "items": [
        {
         "id": "sat-A-2-0",
@@ -1513,14 +1497,6 @@ window.PLAN = {
        },
        {
         "id": "sat-A-2-1",
-        "label": "100 g banana",
-        "kcal": 81,
-        "protein": 1.2,
-        "carbs": 20.3,
-        "fat": 0.1
-       },
-       {
-        "id": "sat-A-2-2",
         "label": "1 teaspoon honey",
         "kcal": 20,
         "protein": 0.0,
@@ -1532,7 +1508,7 @@ window.PLAN = {
      {
       "time": "21:30",
       "name": "Dinner",
-      "note": "Mince with onion, garlic and spices, veg in the oil",
+      "note": "Mince with onion, garlic and spices, thin fries from the air fryer with no oil, veg in the oil",
       "items": [
        {
         "id": "sat-A-3-0",
@@ -1544,6 +1520,14 @@ window.PLAN = {
        },
        {
         "id": "sat-A-3-1",
+        "label": "150 g Farm Frites thin fries (air-fried, no oil)",
+        "kcal": 284,
+        "protein": 4.8,
+        "carbs": 52.9,
+        "fat": 7.4
+       },
+       {
+        "id": "sat-A-3-2",
         "label": "250 g steamed mixed veg",
         "kcal": 105,
         "protein": 8.2,
@@ -1551,7 +1535,7 @@ window.PLAN = {
         "fat": 1.2
        },
        {
-        "id": "sat-A-3-2",
+        "id": "sat-A-3-3",
         "label": "4 teaspoons olive oil",
         "kcal": 164,
         "protein": 0.0,
@@ -1565,7 +1549,7 @@ window.PLAN = {
      {
       "time": "10:00",
       "name": "Breakfast",
-      "note": "Egg and turkey wrap, salad on the side",
+      "note": "Egg and turkey with salad, no wrap today",
       "items": [
        {
         "id": "sat-B-0-0",
@@ -1585,14 +1569,6 @@ window.PLAN = {
        },
        {
         "id": "sat-B-0-2",
-        "label": "1 large bran tortilla (90 g)",
-        "kcal": 250,
-        "protein": 7.0,
-        "carbs": 53.0,
-        "fat": 1.0
-       },
-       {
-        "id": "sat-B-0-3",
         "label": "50 g salad veg (cucumber, tomato, leaves)",
         "kcal": 6,
         "protein": 0.5,
@@ -1604,7 +1580,7 @@ window.PLAN = {
      {
       "time": "14:30",
       "name": "Lunch",
-      "note": "Tuna and veg, no rice today",
+      "note": "Tuna on toast, veg on the side",
       "items": [
        {
         "id": "sat-B-1-0",
@@ -1616,6 +1592,14 @@ window.PLAN = {
        },
        {
         "id": "sat-B-1-1",
+        "label": "2 slices Domty high protein toast",
+        "kcal": 170,
+        "protein": 9.2,
+        "carbs": 28.4,
+        "fat": 2.2
+       },
+       {
+        "id": "sat-B-1-2",
         "label": "100 g steamed mixed veg",
         "kcal": 42,
         "protein": 3.3,
@@ -1669,11 +1653,11 @@ window.PLAN = {
       "items": [
        {
         "id": "sat-B-4-0",
-        "label": "50 g cottage cheese",
-        "kcal": 34,
-        "protein": 5.3,
-        "carbs": 1.6,
-        "fat": 0.8
+        "label": "60 g cottage cheese",
+        "kcal": 41,
+        "protein": 6.4,
+        "carbs": 2.0,
+        "fat": 0.9
        },
        {
         "id": "sat-B-4-1",
